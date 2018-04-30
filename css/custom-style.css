@@ -214,16 +214,29 @@ i.box-circle-solid{
 
 
 
-/* ========== Top Navigation ========== */
+/* ========== Icones do topo ========== */
+/* tamanho da barra */
 .top-nav {
     height: 80px;
     transition: 0.2s ease-in;
 	-webkit-transition: 0.2s ease-in;
 	-moz-transition: 0.2s ease-in;
 }
+/*-- Cores e detalhes da barra --*/
 .top-nav .navbar-nav li .nav-link {
     color: #fff;
     font-size: 14px;
+    padding:6px 26px;
+    margin:6px 5px 0;
+    font-weight: 400;
+    text-transform: uppercase;
+    transition: 0.2s ease-in;
+	-webkit-transition: 0.2s ease-in;
+	-moz-transition: 0.2s ease-in;
+}
+.top-nav .navbar-nav li .nav-icones {
+    color: #fff;
+    font-size: 22px;
     padding:6px 26px;
     margin:6px 5px 0;
     font-weight: 400;
@@ -241,8 +254,9 @@ i.box-circle-solid{
 	-webkit-transition: 0.5s ease-in;
 	-moz-transition: 0.5s ease-in;
 }
+/* Configuração do logo do lado esquerdo */
 .top-nav .navbar-brand{
-	font-size: 28px;
+	font-size: 32px;
 	color: #fff;
 	font-family: 'Montserrat', sans-serif;
 }
@@ -264,7 +278,7 @@ i.box-circle-solid{
 }
 
 .top-nav.light-header .search-box li a.nav-link{
-	padding: 6px 15px;
+	padding: 6px 5px;
 	border:1px solid #fff;
 }
 .top-nav.light-header .search-box li a.nav-link i{
