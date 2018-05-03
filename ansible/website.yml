@@ -1,0 +1,7 @@
+---
+- name: Configuration nginx in aws
+  hosts: aws
+  connection: local
+  gather_facts: False
+  roles:
+    - nginx
