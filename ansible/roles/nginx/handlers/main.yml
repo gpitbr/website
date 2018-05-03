@@ -1,5 +1,5 @@
 ---
-- name: Testa nginx e restarta
+- name: Testa nginx e restarted
   command: nginx -t
   notify: [ 'Restart nginx' ]
 
