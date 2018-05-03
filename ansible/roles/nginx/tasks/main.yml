@@ -1,21 +1,29 @@
 ---
-- name: Update OS
+- name: Atualizando sistema operacional
   yum: name="*" state=latest update_cache=yes
 
-- name: Install packages essentials
+- name: Instala os pre-requisita
   yum: name={{item}} state=latest update_cache=yes
   with_items:
    - vim
 
-- name: Copy template nginx.repo
+- name: Copia template nginx.repo
   template: src=nginx.repo.j2 dest=/etc/yum.repos.d/nginx.repo
-
-- name: Install nginx web server
+  
+- name: Instala nginx web server
   yum: name=nginx state=latest update_cache=yes
-  notify:
-   - start nginx
+  notify: [ 'Testa nginx e restarta' ]
 
-- name: Copy templates nginx.conf
-  template: src=nginx.conf.j2 dest=/etc/nginx/nginx.conf
-  notify:
-  - reload nginx
+- name: Cria diretorio vhosts
+  file: 
+   path: /etc/nginx/conf.d/vhosts
+   state: directory
+   mode: 0755
+
+- name: copia templates nginx.conf/gpit.conf (vhost)
+  template: src={{ item.src }} dest={{ item.dest }} mode=0644 owner={{ item.owner }} group={{ item.group }}
+  with_items:
+    - { src: nginx.conf.j2, dest: /etc/nginx/nginx.conf, mode: 0644, owner: root, group: root }
+    - { src: gpit.conf.j2, dest: /etc/nginx/conf.d/vhosts/gpit.conf, mode: 0644, owner: root, group: root }
+  notify: [ 'Testa nginx e reload' ]
+  

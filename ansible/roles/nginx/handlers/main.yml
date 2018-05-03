@@ -1,0 +1,19 @@
+---
+- name: Testa nginx e restarta
+  command: nginx -t
+  notify: [ 'Restart nginx' ]
+
+- name: Testa nginx e reload
+  command: nginx -t
+  notify: [ 'Reload nginx' ]
+
+- name: Restart nginx
+  systemd: 
+   name: nginx
+   enabled: yes
+   daemon_reload: yes
+   masked: no
+   state: restarted
+
+- name: Reload nginx
+  command: nginx -s reload

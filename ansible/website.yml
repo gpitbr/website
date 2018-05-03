@@ -1,7 +1,7 @@
 ---
-- name: Configuration nginx in aws
+- name: Configurando nginx web server na aws
   hosts: aws
-  connection: local
-  gather_facts: False
+  become: True
+  gather_facts: True
   roles:
     - nginx
