@@ -1,4 +1,5 @@
 #!/bin/bash
+PLAYBOOK_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" > /dev/null && pwd )"
 ENV=$1
 
 if [ -z "$ENV" ]; then
@@ -13,5 +14,5 @@ if [ -z "$ENV" ]; then
     exit 1
 fi
 
-ansible-playbook ansible/website.yml -l $ENV  -vvv #--extras-vars="ambiente=$ENV
+ansible-playbook $PLAYBOOK_DIR/ansible/website.yml -l $ENV  -vvv #--extras-vars="ambiente=$ENV
 # ansible-playbook -i ansible/inventories/${PROVIDER}/${ENV}/hosts ansible/site.yml
