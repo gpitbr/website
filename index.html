@@ -10,7 +10,6 @@
 	<!-- Folha de estilo propria -->
 	<link rel="stylesheet" type="text/css" href="css/custom-style.css">
 	<link rel="stylesheet" type="text/css" href="css/loaders.css"/>
-	
 	<!-- Framework Font-Awesome como folha de estilo -->
 	<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
 	<!-- Framework JQuery -->
@@ -29,54 +28,63 @@
 		</div>
 	<!-- FIM da Animação carregamento da página -->
 	
-	<!-- Barra superior de navegaçãp -->
+	<!-- Barra superior de navegação-->
 		<nav class="navbar navbar-expand-md fixed-top top-nav">
 			<div class="container-fluid">
-			  <a class="navbar-brand" href="index.html"><strong>GPIT</strong></a>
-			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			    <span class="navbar-toggler-icon"><img src="img/icons/menu.png"></span>
-			  </button>
-		  		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			    	<ul class="navbar-nav m-auto text-sm-center text-md-center">
-			      <li class="nav-item">
-			        <a class="nav-link" href="#home">Inicio <span class="sr-only">(current)</span></a>
-			      </li>
-			      <li class="nav-item">
-			        <a class="nav-link" href="#services">Serviços</a>
-			      </li>
-			      <li class="nav-item">
-			        <a class="nav-link" href="#about">Sobre nós</a>
-			      </li>
-			      <li class="nav-item">
-			        <a class="nav-link" href="#price">Cases</a>
-			      </li>
-			      <li class="nav-item">
-			        <a class="nav-link" href="#testimonial">Portifólio</a>
-			      </li>
-			      <li class="nav-item">
-			        <a class="nav-link" href="#contato">Contato</a>
-			      </li>
-			    	</ul>
+				<a class="navbar-brand" href="index.html"><strong>GPIT</strong></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"><img src="img/icons/menu.png"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav m-auto text-sm-center text-md-center">
+					<li class="nav-item">
+					<a class="nav-link" href="#inicio">Inicio <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+					<a class="nav-link" href="#services">Serviços</a>
+					</li>
+					<li class="nav-item">
+					<a class="nav-link" href="#about">Sobre nós</a>
+					</li>
+					<li class="nav-item">
+					<a class="nav-link" href="#price">Cases</a>
+					</li>
+					<li class="nav-item">
+					<a class="nav-link" href="#testimonial">Portifólio</a>
+					</li>
+					<li class="nav-item">
+					<a class="nav-link" href="#contato">Contato</a>
+					</li>
+					</ul>
 				</div>
 				<!-- Barra redes sociais -->
-			  	<ul class="navbar-nav ml-auto">
-					<li class="nav-item">
-						<a class="nav-icones" href="#"><i class="fa fa-whatsapp text-white"></i></a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-icones" href="#"><i class="fa fa-phone text-white"></i></a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-icones" href="#"><i class="fa fa-linkedin text-white"></i></a>
-					</li>
-				</ul>
+				<div class="collapse navbar-collapse">
+						<ul class="navbar-nav ml-auto">
+						  <li class="nav-item">
+						  <li class="nav-item">
+							<a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://twitter.com/CreativeTim" target="_blank" data-original-title="Follow us on Twitter">
+							  <i class="fa fa-phone"></i>
+							</a>
+						  </li>
+						  <li class="nav-item">
+							<a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://www.facebook.com/CreativeTim" target="_blank" data-original-title="Like us on Facebook">
+							  <i class="fa fa-whatsapp"></i>
+							</a>
+						  </li>
+						  <li class="nav-item">
+							<a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://www.instagram.com/CreativeTimOfficial" target="_blank" data-original-title="Follow us on Instagram">
+							  <i class="fa fa-envelope"></i>
+							</a>
+						  </li>
+						</ul>
+					  </div>
 				<!-- Barra redes sociais -->							
 			</div>
 		</nav>
 	<!-- FIM da Barra superior de navegaçãp -->
 
 	<!-- Tema de introdução -->
-		<section id="home" class="intro intro-bg bg-overlay parallax">
+		<section id="inicio" class="intro intro-bg bg-overlay parallax">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-6 col-md-12 caption-two-panel ml-auto pt-5">
@@ -257,94 +265,57 @@
 		</section>
 	<!-- FIM do BLOCO 04 - Depoimento dos clientes-->
 
-	<!-- BLOCO 05 - Fale conosco desativado >
-		<section id="contato" class="contact-section h-100 bg-dark">
-			<div id="map" class="bg-overlay"></div>
-			<div class="container py-5">
-				<div class="col-lg-8 col-md-6 col-sm-10 form-sec bg-white my-5 p-5 mx-auto">
-						<form>
-						  <h2 class="mb-4">Fale conosco!</h2>
-						  <div class="row">
-						  	<div class="col-md-6">
-								<div class="form-group">
-									<label class="sr-only" for="formGroupExampleInput">Full Name</label>
-									<input class="form-control" id="formGroupExampleInput" placeholder="Nome" onfocus="this.placeholder=''" onblur="this.placeholder='Full Name'" type="text">
-								</div>
-						  	</div>
-						  	<div class="col-md-6">
-								<div class="form-group">
-									<label class="sr-only" for="formGroupExampleInput2">Phone Number</label>
-									<input class="form-control" id="formGroupExampleInput2" placeholder="Telefone" onfocus="this.placeholder=''" onblur="this.placeholder='Phone Number'" type="text">
-								</div>		
-						  	</div>
-						  </div>
-						  <div class="row">
-							<div class="col-md-6">
-								<div class="form-group">
-									<label class="sr-only" for="formGroupExampleInput2">Email Address</label>
-									<input class="form-control" id="formGroupExampleInput2" placeholder="Email" onfocus="this.placeholder=''" onblur="this.placeholder='Email Address'" type="email">
-								</div>
+	<!-- Rodapé - Footer -->
+		<section id="contato" class="contact-section">
+			<div class="copy-footer bg-primary py-2">
+				<footer id="myFooter">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-6">
+								<form>
+									<div class="form-group">
+									<label for="insertname">Nome</label>
+									<input type="text" class="form-control" id="insertname" placeholder="Digite aqui seu nome">
+									</div>
+									<div class="form-group">
+										<label for="insertemail">Endereço de email</label>
+										<input type="email" class="form-control" id="insertemail" placeholder="Digite aqui seu email">
+									</div>
+									<div class="form-group">
+									<label for="insertmensagem">Mensagem</label>
+									<textarea class="form-control" id="insertmensagem" rows="2" placeholder="Digite aqui sua mensagem"></textarea>
+									</div>
+								</form>
 							</div>
-						  </div>
-						  <div class="row">
-						  	<div class="col-md-12">
-								<div class="form-group">
-									<label class="sr-only" for="formGroupExampleInput2">Message</label>
-									<textarea class="form-control" placeholder="Coloque sua mensagem aqui!" rows="4" onfocus="this.placeholder=''" onblur="this.placeholder='Enter your message here!'"></textarea>
-								</div>
-								<div class="form-group">
-									<button class="btn btn-primary btn-capsul px-4">Enviar</button>
-								</div>		
-						  	</div>
-						  </div>
-					  </form>
+							<!--quarta coluna-->
+							<div class="col-sm-4">
+								<h6 class="text-uppercase font-weight-bold">
+									<strong>Contatos</strong>
+								</h6>
+								<hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+								<p>
+								<i class="fa fa-phone mr-3"></i> (11) 1234-1234</p>	
+								<p>
+								<i class="fa fa-whatsapp mr-3"></i> (11) 95617-8782</p>
+								<p>
+								<i class="fa fa-envelope mr-3"></i> contato@gpit.com.br</p>
+								<p>
+								<i class="fa fa-home mr-3"></i> Rua caieiras, São Paulo / SP 785</p>
+							</div>
+							<!--/.quarta coluna -->
+						</div>
+						<!-- Here we use the Google Embed API to show Google Maps. -->
+						<!-- In order for this to work in your project you will need to generate a unique API key.  -->
+						<iframe id="map-container" frameborder="0" style="border:0"
+							src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ0WGkg4FEzpQRrlsz_whLqZs&key=AIzaSyBdJm9Amm4KALkKlZObWn40dcpRyH119zg" >
+						</iframe>
 					</div>
+					<div class="footer-copyright">
+						<p>© 2018 Direitos reservados </p>
+					</div>
+				</footer>
 			</div>
 		</section>
-	FIM do BLOCO 05 - Fale conosco -->
-
-	<!-- Rodapé - Footer -->
-	<section id="contato" class="contact-section">
-		<div class="copy-footer bg-primary py-2">
-			<footer id="myFooter">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-9">
-							<h5>Colocar formulario de contato</h5>
-							<ul>
-								<li><a href="#">blabla</a></li>
-							</ul>
-						</div>
-
-            			<!--quarta coluna-->
-            			<div class="col-sm-3">
-                			<h6 class="text-uppercase font-weight-bold">
-                    			<strong>Contatos</strong>
-                			</h6>
-                			<hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                				<p>
-							<i class="fa fa-home mr-3"></i> Rua caieiras, São Paulo / SP 785</p>
-							<p>
-							<i class="fa fa-envelope mr-3"></i> contato@gpit.com.br</p>
-							<p>
-							<i class="fa fa-phone mr-3"></i> (11) 1234-1234</p>
-							<p>
-							<i class="fa fa-whatsapp mr-3"></i> (11) 95617-8782</p>
-            			</div>
-            			<!--/.quarta coluna -->
-					</div>
-					<!-- Here we use the Google Embed API to show Google Maps. -->
-					<!-- In order for this to work in your project you will need to generate a unique API key.  -->
-					<iframe id="map-container" frameborder="0" style="border:0"
-						src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ0WGkg4FEzpQRrlsz_whLqZs&key=AIzaSyBdJm9Amm4KALkKlZObWn40dcpRyH119zg" >
-					</iframe>
-				</div>
-				<div class="footer-copyright">
-					<p>© 2018 Direitos reservados </p>
-				</div>
-			</footer>
-		</div>
-	</section>
 	<!-- FIM do Rodapé - Footer -->
 
 	<!-- Scripts em Javascript para exibir o mapa -->
@@ -354,5 +325,4 @@
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<!-- FIM dos Scripts em Javascript para exibir o mapa -->
 </body>
-
 </html>
