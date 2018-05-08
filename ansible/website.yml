@@ -1,6 +1,6 @@
 ---
-- name: Configurando nginx web server na aws
-  hosts: aws
+- name: Configurando nginx web server
+  hosts: aws:gcp
   become: True
   gather_facts: True
   roles:
