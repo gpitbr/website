@@ -2,15 +2,20 @@
 <html>
 <head>
 	<title>GPIT - Consultoria OpenSource</title>
-	<!-- bootstrap Style CSS File -->
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Framework booststrap como folha de estilo -->
 	<link rel="stylesheet" href="Componentes/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="Componentes/bootstrap/dist/js/bootstrap.min.js">
-	<!-- Custom Style CSS File -->
+	<!-- Folha de estilo propria -->
 	<link rel="stylesheet" type="text/css" href="css/custom-style.css">
 	<link rel="stylesheet" type="text/css" href="css/loaders.css"/>
-	<!-- Font-Awesome Style CSS File -->
+	
+	<!-- Framework Font-Awesome como folha de estilo -->
 	<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+	<!-- Framework JQuery -->
 	<script  src="https://code.jquery.com/jquery-3.2.1.min.js" ></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 <body>
 	<!-- Animação carregamento da página -->
@@ -49,7 +54,7 @@
 			        <a class="nav-link" href="#testimonial">Portifólio</a>
 			      </li>
 			      <li class="nav-item">
-			        <a class="nav-link" href="#contact">Contato</a>
+			        <a class="nav-link" href="#contato">Contato</a>
 			      </li>
 			    	</ul>
 				</div>
@@ -252,8 +257,8 @@
 		</section>
 	<!-- FIM do BLOCO 04 - Depoimento dos clientes-->
 
-	<!-- BLOCO 05 - Fale conosco desativado -->
-		<section id="contact" class="contact-section h-100 bg-dark">
+	<!-- BLOCO 05 - Fale conosco desativado >
+		<section id="contato" class="contact-section h-100 bg-dark">
 			<div id="map" class="bg-overlay"></div>
 			<div class="container py-5">
 				<div class="col-lg-8 col-md-6 col-sm-10 form-sec bg-white my-5 p-5 mx-auto">
@@ -296,23 +301,59 @@
 					</div>
 			</div>
 		</section>
-	<!-- FIM do BLOCO 05 - Fale conosco -->
+	FIM do BLOCO 05 - Fale conosco -->
 
-	<!-- Rodapé - Footer desativado -->
+	<!-- Rodapé - Footer -->
+	<section id="contato" class="contact-section">
 		<div class="copy-footer bg-primary py-2">
-			<div class="container text-center text-light">
-				&copy; <a href="#" target="_blank">GPIT</a> <span id="year"></span>&nbsp Todos os direitos reservados</i>
-			</div>
+			<footer id="myFooter">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-9">
+							<h5>Colocar formulario de contato</h5>
+							<ul>
+								<li><a href="#">blabla</a></li>
+								<li><a href="#">blabla</a></li>
+								<li><a href="#">blabla</a></li>
+							</ul>
+						</div>
+
+            			<!--quarta coluna-->
+            			<div class="col-sm-3">
+                			<h6 class="text-uppercase font-weight-bold">
+                    			<strong>Contatos</strong>
+                			</h6>
+                			<hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                				<p>
+							<i class="fa fa-home mr-3"></i> Rua do caju, São Paulo / SP 785</p>
+							<p>
+							<i class="fa fa-envelope mr-3"></i> contato@gpit.com.br</p>
+							<p>
+							<i class="fa fa-phone mr-3"></i> (11) 1234-1234</p>
+							<p>
+							<i class="fa fa-whatsapp mr-3"></i> (11) 95617-8782</p>
+            			</div>
+            			<!--/.quarta coluna -->
+					</div>
+					<!-- Here we use the Google Embed API to show Google Maps. -->
+					<!-- In order for this to work in your project you will need to generate a unique API key.  -->
+					<iframe id="map-container" frameborder="0" style="border:0"
+						src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ0WGkg4FEzpQRrlsz_whLqZs&key=AIzaSyBdJm9Amm4KALkKlZObWn40dcpRyH119zg" >
+					</iframe>
+				</div>
+				<div class="footer-copyright">
+					<p>© 2018 Direitos reservados </p>
+				</div>
+			</footer>
 		</div>
+	</section>
 	<!-- FIM do Rodapé - Footer -->
-
-	<!-- Rodapé -->
-
-	<!-- Fim do rodapé -->
 
 	<!-- Scripts em Javascript para exibir o mapa -->
 		<script src="js/bootstrap.min.js" ></script>
 		<script src="js/core.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<!-- FIM dos Scripts em Javascript para exibir o mapa -->
 </body>
 

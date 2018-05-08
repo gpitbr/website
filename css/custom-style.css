@@ -299,7 +299,7 @@ i.box-circle-solid{
 	height: 60%;
 }
 .intro-bg{
-	background:url("../img/cloude01.jpg");
+	background:url("../img/themeintro.jpg");
 	background-repeat:no-repeat;
 	background-position: center center;
 	background-size:cover;
@@ -626,85 +626,63 @@ transition:1s ease-in;
 
 
 /* ========== Footer Section ========== */
-.footer-section{
-	float: left;
-	width:100%;
-	position: relative;
-	z-index: 1;
+#myFooter {
+    background-color: #182c39;
+    color: white;
+    padding-top: 20px;
 }
-.footer-section .list-box img {
-    width: 70px;
+
+#map-container {
+    height: 240px;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
-.footer-section .list-box a.title{
-	font-size: 14px;
-	line-height: 0;
+
+#myFooter .row {
+    margin: 0 85px;
 }
-.footer-section .copy-text{
-	font-size: 12px;
-	border-top: 1px solid #555;
-}
-.social-box a.icoRss:hover {
-	background-color: #F56505;
-}
-.social-box a.fa-box:hover {
-	background-color:#3B5998;
-}
-.social-box a.tw-box:hover {
-	background-color:#33ccff;
-}
-.social-box a.go-box:hover {
-	background-color:#BD3518;
-}
-.social-box a.ld-box:hover {
-	background-color:#007bb7;
-}
-ul.social-box {
-	list-style: none;
-	display: inline;
-	margin-left:0 !important;
-	padding: 0;
-}
-ul.social-box li {
-	display: inline;
-	margin: 0 5px;
-}
-.social-box li a {
-    background: #414344;
-    border-radius: 50%;
-    display: inline-block;
-    font-size: 13px;
-    height: 30px;
-    margin: 0 auto;
-    position: relative;
+
+#myFooter .footer-copyright {
+    background-color: #10222e;
+    padding-top: 3px;
+    padding-bottom: 3px;
     text-align: center;
-    width: 30px;
 }
 
-.social-box li i {
-	margin:0;
-	line-height:30px;
-	text-align: center;
+#myFooter .footer-copyright p {
+    margin: 10px;
+    color: #ccc;
 }
 
-.social-box li a:hover i, .triggeredHover {
-	-moz-transform: rotate(360deg);
-	-webkit-transform: rotate(360deg);
-	-ms--transform: rotate(360deg);
-	transform: rotate(360deg);
-	-webkit-transition: all 0.2s;
-	-moz-transition: all 0.2s;
-	-o-transition: all 0.2s;
-	-ms-transition: all 0.2s;
-	transition: all 0.2s;
+#myFooter .container {
+    width: auto;
 }
-.social-box i {
-	color: #fff;
-	-webkit-transition: all 0.8s;
-	-moz-transition: all 0.8s;
-	-o-transition: all 0.8s;
-	-ms-transition: all 0.8s;
-	transition: all 0.8s;
+
+#myFooter ul {
+    list-style-type: none;
+    padding-left: 0;
+    line-height: 1.7;
 }
+
+#myFooter h5 {
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+#myFooter a {
+    color: #d2d1d1;
+    text-decoration: none;
+}
+
+#myFooter a:hover,
+#myFooter a:focus {
+    text-decoration: none;
+    color: white;
+}
+
 
 /* ========== Copy Content Styles ========== */
 .copy-content-sec{
