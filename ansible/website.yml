@@ -1,0 +1,7 @@
+---
+- name: Configurando nginx web server na aws
+  hosts: aws
+  become: True
+  gather_facts: True
+  roles:
+    - nginx
