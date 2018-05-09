@@ -1,9 +1,9 @@
 ---
-- name: Testa nginx e restarted
+- name: Test nginx e restarted
   command: nginx -t
   notify: [ 'Restart nginx' ]
 
-- name: Testa nginx e reload
+- name: Test nginx e reload
   command: nginx -t
   notify: [ 'Reload nginx' ]
 
