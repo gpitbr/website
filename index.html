@@ -1,6 +1,12 @@
+<!-- -->
+<!-- Venha fazer seu projeto conosco e tenha as melhores práticas do mercado e uma completa documentação -->
+<!-- Elaborado por: davipiresdematos@hotmail.com -->
+<!-- -->
+
 <!DOCTYPE html>
 <html>
 <head>
+	<!-- titulo -->
 	<title>GPIT - Consultoria OpenSource</title>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -57,28 +63,11 @@
 					</li>
 					</ul>
 				</div>
-				<!-- Barra redes sociais -->
-				<div class="collapse navbar-collapse">
-						<ul class="navbar-nav ml-auto">
-						  <li class="nav-item">
-						  <li class="nav-item">
-							<a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="#contato" target="_blank" data-original-title="Ligue para nós">
-							  <i class="fa fa-phone"></i>
-							</a>
-						  </li>
-						  <li class="nav-item">
-							<a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="#contato" target="_blank" data-original-title="Like us on Facebook">
-							  <i class="fa fa-whatsapp"></i>
-							</a>
-						  </li>
-						  <li class="nav-item">
-							<a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="#contato" target="_blank" data-original-title="Follow us on Instagram">
-							  <i class="fa fa-envelope"></i>
-							</a>
-						  </li>
-						</ul>
-					  </div>
-				<!-- Barra redes sociais -->							
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="#"><i class="fa fa-whatsapp text-white"></i></a>
+					</li>
+				</ul>
 			</div>
 		</nav>
 	<!-- FIM da Barra superior de navegaçãp -->
@@ -265,69 +254,71 @@
 		</section>
 	<!-- FIM do BLOCO 04 - Depoimento dos clientes-->
 
-	<!-- Rodapé - Footer -->
-		<section id="contato" class="contact-section">
-			<div class="copy-footer bg-primary py-2">
-				<footer id="myFooter">
-					<div class="container">
-						<div class="row">
-							<!--primeira coluna-->
-							<div class="col-sm-6">
-								<h6 class="text-uppercase font-weight-bold">
-									<strong>Contatos</strong>
-								</h6>
-								<hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-								<p>
-								<i class="fa fa-phone mr-3"></i><a href="tel:123-456-7890">(11) 1234-1234</a></p>	
-								<p>
-								<i class="fa fa-whatsapp mr-3"></i><a href="tel:123-456-7890">(11) 95617-8782</a></p>
-								<p>
-								<i class="fa fa-envelope mr-3"></i> contato@gpit.com.br</p>
-								<p>
-								<i class="fa fa-home mr-3"></i> Rua caieiras, São Paulo / SP 785</p>
-							</div>
-							<!--/.primeira coluna -->
-							<!--segunda coluna-->							
-							<div class="col-sm-6">
-								<h6 class="text-uppercase font-weight-bold">
-									<strong>Envie a sua mensagem</strong>
-								</h6>
-								<form>
-									<div class="form-group">
-									<input type="text" class="form-control" id="insertname" placeholder="Digite aqui seu nome!">
-									</div>
-									<div class="form-group">
-										<input type="email" class="form-control" id="insertemail" placeholder="Digite aqui seu email!">
-									</div>
-									<div class="form-group">
-									<textarea class="form-control" id="insertmensagem" rows="2" placeholder="Digite aqui sua mensagem!"></textarea>
-									</div>
-									<a class="btn btn-primary text-white mr-3" href="#services">Enviar</a>
-								</form>
-							</div>
-							<!-- /. segunda coluna-->							
+	<!-- BLOCO 05 - Contato -->
+	<section id="contato" class="contact-section h-100 bg-dark">
+		<div id="map" class="bg-overlay"></div>
+		<div class="container py-5">
+			<div class="col-lg-5 col-md-6 col-sm-0 form-sec bg-white my-5 p-5 mx-auto">
+				<form>
+					<h2 class="mb-4">Fale conosco!</h2>
+					<!-- Fale conosco -->
+					<div class="row">
+						<div class="col-md-6">
+						<div class="form-group">
+							<label class="sr-only" for="formGroupExampleInput">Full Name</label>
+							<input class="form-control" id="formGroupExampleInput" placeholder="Nome" onfocus="this.placeholder=''" onblur="this.placeholder='Full Name'" type="text">
 						</div>
-						<!-- Here we use the Google Embed API to show Google Maps. -->
-						<!-- In order for this to work in your project you will need to generate a unique API key.  -->
-						<div class="col-sm-12">
-								<iframe id="map-container" frameborder="0" style="border:0"
-								src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ0WGkg4FEzpQRrlsz_whLqZs&key=AIzaSyBdJm9Amm4KALkKlZObWn40dcpRyH119zg" >
-							</iframe>
-						</div>						
+						</div>
 					</div>
-					<div class="footer-copyright">
-						<p>© 2018 Direitos reservados </p>
+
+					<!-- Endereço de email e telefone -->
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="sr-only" for="formGroupExampleInput2">Email Address</label>
+								<input class="form-control" id="formGroupExampleInput2" placeholder="Email" onfocus="this.placeholder=''" onblur="this.placeholder='Email Address'" type="email">
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="sr-only" for="formGroupExampleInput2">Telefone</label>
+								<input class="form-control" id="formGroupExampleInput2" placeholder="Telefone" onfocus="this.placeholder=''" onblur="this.placeholder='Email Address'" type="email">
+							</div>
+						</div>							
 					</div>
-				</footer>
+
+					<!-- Mensagem -->
+					<div class="row">
+						<div class="col-md-12">
+						<div class="form-group">
+							<label class="sr-only" for="formGroupExampleInput2">Message</label>
+							<textarea class="form-control" placeholder="Digite sua mensagem aqui!" rows="4" onfocus="this.placeholder=''" onblur="this.placeholder='Enter your message here!'"></textarea>
+						</div>
+						<div class="form-group">
+							<button class="btn btn-primary btn-capsul px-4">Enviar</button>
+						</div>		
+						</div>
+					</div>
+				</form>
 			</div>
-		</section>
-	<!-- FIM do Rodapé - Footer -->
+		</div>
+	</section>
+
+	<!-- footer -->
+		<div class="copy-footer bg-primary py-2">
+			<div class="container text-center text-light">
+				<a href="#" target="_blank">gpit.com.br</a> &copy; <span id="year"></span></i>
+			</div>
+		</div>
+	<!-- /. fim footer -->
+
 
 	<!-- Scripts em Javascript para exibir o mapa -->
+		<script  src="https://code.jquery.com/jquery-3.2.1.min.js" ></script>
 		<script src="js/bootstrap.min.js" ></script>
+		<script async deffer type="text/javascript" src="https://maps.google.com/maps/api/js?key= AIzaSyB52BfJHBtqiqYBn_D4ZUqujiWxAOiRyTc&callback=initMap"></script>
+		<script src="js/gmap-custom.js" ></script>
 		<script src="js/core.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<!-- FIM dos Scripts em Javascript para exibir o mapa -->
+	<!-- /. Fim Scripts em Javascript para exibir o mapa -->	
 </body>
 </html>
