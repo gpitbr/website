@@ -1,1 +1,8 @@
 ---
+# Variaveis globais para nuvem GCE
+
+# Path with files terraform
+project_dir: /var/gcp
+
+
+# Variaveis globais para nuvem AWS
