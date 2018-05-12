@@ -141,11 +141,11 @@ i.box-circle-solid{
 	top:0;
 	z-index: -1;
 }
-.bg-right{
+/* .bg-right{ 
 	background:url("../img/sec-bg-01.jpg");
 	background-repeat: no-repeat;
 	background-position: top right;
-}
+} */
 .sec-bg-02{
 	background:url("../img/sec-bg-02.jpg");
 	background-repeat: no-repeat;
