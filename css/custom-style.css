@@ -219,7 +219,8 @@ i.box-circle-solid{
 	-webkit-transition: 0.2s ease-in;
 	-moz-transition: 0.2s ease-in;
 }
-/*-- Cores e detalhes da barra --*/
+/*-------------------- Cores e detalhes da barra --------------------*/
+/*-- Cores e detalhes dos atalhos central --*/
 .top-nav .navbar-nav li .nav-link {
     color: #fff;
     font-size: 14px;
@@ -250,6 +251,26 @@ i.box-circle-solid{
     transition: 0.5s ease-in;
 	-webkit-transition: 0.5s ease-in;
 	-moz-transition: 0.5s ease-in;
+}
+/*-- Cores e detalhes do numero de telefone --*/
+.phone {
+	float: right;
+	color: #fff;
+    font-size: 14px;
+    padding:16px 26px;
+    margin:16px 5px 0;
+    font-weight: 400;
+    text-transform: uppercase;
+    transition: 0.2s ease-in;
+	-webkit-transition: 0.2s ease-in;
+	-moz-transition: 0.2s ease-in;
+}
+.phone p {
+	color: #f8f8f8;
+	font-size: 18px;
+	line-height: 32px;
+	background: url(../img/icons/phone.png) no-repeat left;
+	padding-left: 30px;
 }
 /* Configuração do logo do lado esquerdo */
 .top-nav .navbar-brand{
