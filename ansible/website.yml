@@ -1,7 +1,33 @@
 ---
+- name: Deploy terraform
+  hosts: localhost
+  gather_facts: False
+  become: True
+  connection: local
+    
+  pre_tasks:
+    - name: Update OS
+      yum:
+        name: "*"
+        state: latest
+    
+    - name: Install packages requirements
+      package: name={{item}} state=latest
+      with_items:
+        - wget
+  
+    - name: Install terraform
+      unarchive:
+        src: https://releases.hashicorp.com/terraform/{{terraform_version}}/terraform_{{terraform_version}}_linux_amd64.zip
+        dest: /usr/bin
+        remote_src: True
+  roles:
+    - deploy
+
 - name: Configurando nginx web server
   hosts: aws:gcp
   become: True
   gather_facts: True
   roles:
     - nginx
+

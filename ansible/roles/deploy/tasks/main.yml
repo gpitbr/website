@@ -1,19 +1,16 @@
 ---
-- name: Install packages requirements
-  package: name={{item}} state=latest
-  with_items:
-    - wget
+- include_vars:
+    file: inventory/group_vars/{{perfil}}.yml
   tags:
-    - terraform_install
-    - terraform_plan
-
-- name: Install terraform
-  unarchive:
-    src: https://releases.hashicorp.com/terraform/{{terraform_version}}/terraform_{{terraform_version}}_linux_amd64.zip
-    dest: /usr/bin
-    remote_src: True
+    - deploy
+    
+- name: Init State
+  command: terraform init -get=true -input=false
+  register: _terraform_init_state
+  changed_when: false
+  args:
+     chdir: "{{ project_dir }}"
   tags:
-    - terraform_install
     - terraform_plan
 
 - name: Plan
@@ -35,7 +32,7 @@
     
 - name: Destroy
   terraform:
-    project_patch: "{{ project_dir }}"
+    project_path: "{{ project_dir }}"
     lock: true
     state: absent
   tags:
