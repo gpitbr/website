@@ -1,4 +1,19 @@
 ---
+- name: Install packages requirements
+  package: name={{item}} state=latest
+  with_items:
+    - wget
+  tags:
+    - terraform_install
+
+- name: Install terraform
+  unarchive:
+    src: https://releases.hashicorp.com/terraform/{{terraform_version}}/terraform_{{terraform_version}}_linux_amd64.zip
+    dest: /usr/bin
+    remote_src: True
+  tags:
+    - terraform_install
+
 - name: Plan
   terraform:
     project_path: "{{ project_dir }}"
