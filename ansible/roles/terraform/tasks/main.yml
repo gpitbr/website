@@ -5,6 +5,7 @@
     - wget
   tags:
     - terraform_install
+    - terraform_plan
 
 - name: Install terraform
   unarchive:
@@ -13,6 +14,7 @@
     remote_src: True
   tags:
     - terraform_install
+    - terraform_plan
 
 - name: Plan
   terraform:
@@ -38,4 +40,3 @@
     state: absent
   tags:
     - terraform_destroy
-
