@@ -1,4 +1,18 @@
 ---
+- include_vars:
+    file: inventory/group_vars/{{perfil}}.yml
+  tags:
+    - deploy
+    
+- name: Init State
+  command: terraform init -get=true -input=false
+  register: _terraform_init_state
+  changed_when: false
+  args:
+     chdir: "{{ project_dir }}"
+  tags:
+    - terraform_plan
+
 - name: Plan
   terraform:
     project_path: "{{ project_dir }}"
@@ -18,9 +32,8 @@
     
 - name: Destroy
   terraform:
-    project_patch: "{{ project_dir }}"
+    project_path: "{{ project_dir }}"
     lock: true
     state: absent
   tags:
     - terraform_destroy
-
