@@ -1,15 +1,25 @@
+<!-- -->
+<!-- Venha fazer seu projeto conosco e tenha as melhores práticas do mercado e uma completa documentação -->
+<!-- Elaborado por: davipiresdematos@hotmail.com -->
+<!-- -->
+
 <!DOCTYPE html>
 <html>
 <head>
+	<!-- titulo -->
 	<title>GPIT - Consultoria OpenSource</title>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicons -->
+  	<link href="img/favicon.png" rel="icon">
 	<!-- Framework booststrap como folha de estilo -->
-	<link rel="stylesheet" href="Componentes/bootstrap/dist/css/bootstrap.min.css">
-	<link rel="stylesheet" href="Componentes/bootstrap/dist/js/bootstrap.min.js">
+	<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="lib/bootstrap/js/bootstrap.min.css" rel="stylesheet">
 	<!-- Folha de estilo propria -->
 	<link rel="stylesheet" type="text/css" href="css/custom-style.css">
 	<link rel="stylesheet" type="text/css" href="css/loaders.css"/>
+  	<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  	<link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
 	<!-- Framework Font-Awesome como folha de estilo -->
 	<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
 	<!-- Framework JQuery -->
@@ -28,61 +38,42 @@
 		</div>
 	<!-- FIM da Animação carregamento da página -->
 	
-	<!-- Barra superior de navegação-->
+	<!-- Barra superior de navegação -->
 		<nav class="navbar navbar-expand-md fixed-top top-nav">
 			<div class="container-fluid">
 				<a class="navbar-brand" href="index.html"><strong>GPIT</strong></a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"><img src="img/icons/menu.png"></span>
+				<span class="navbar-toggler-icon"><img src="img/icons/hamburguer.png"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav m-auto text-sm-center text-md-center">
-					<li class="nav-item">
-					<a class="nav-link" href="#inicio">Inicio <span class="sr-only">(current)</span></a>
-					</li>
-					<li class="nav-item">
-					<a class="nav-link" href="#services">Serviços</a>
-					</li>
-					<li class="nav-item">
-					<a class="nav-link" href="#about">Sobre nós</a>
-					</li>
-					<li class="nav-item">
-					<a class="nav-link" href="#price">Cases</a>
-					</li>
-					<li class="nav-item">
-					<a class="nav-link" href="#testimonial">Portifólio</a>
-					</li>
-					<li class="nav-item">
-					<a class="nav-link" href="#contato">Contato</a>
-					</li>
+						<li class="nav-item">
+						<a class="nav-link" href="#inicio">Inicio <span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item">
+						<a class="nav-link" href="#services">Serviços</a>
+						</li>
+						<li class="nav-item">
+						<a class="nav-link" href="#about">Sobre nós</a>
+						</li>
+						<li class="nav-item">
+						<a class="nav-link" href="#price">Cases</a>
+						</li>
+						<li class="nav-item">
+						<a class="nav-link" href="#testimonial">Portifólio</a>
+						</li>
+						<li class="nav-item">
+						<a class="nav-link" href="#contato">Contato</a>
+						</li>
 					</ul>
 				</div>
-				<!-- Barra redes sociais -->
-				<div class="collapse navbar-collapse">
-						<ul class="navbar-nav ml-auto">
-						  <li class="nav-item">
-						  <li class="nav-item">
-							<a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="#contato" target="_blank" data-original-title="Ligue para nós">
-							  <i class="fa fa-phone"></i>
-							</a>
-						  </li>
-						  <li class="nav-item">
-							<a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="#contato" target="_blank" data-original-title="Like us on Facebook">
-							  <i class="fa fa-whatsapp"></i>
-							</a>
-						  </li>
-						  <li class="nav-item">
-							<a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="#contato" target="_blank" data-original-title="Follow us on Instagram">
-							  <i class="fa fa-envelope"></i>
-							</a>
-						  </li>
-						</ul>
-					  </div>
-				<!-- Barra redes sociais -->							
+				<div class="phone">
+					<p><i class="fa fa-phone"></i> (11) 4899-0530</p>
+				</div>
 			</div>
 		</nav>
 	<!-- FIM da Barra superior de navegaçãp -->
-
+	
 	<!-- Tema de introdução -->
 		<section id="inicio" class="intro intro-bg bg-overlay parallax">
 			<div class="container">
@@ -98,41 +89,42 @@
 		</section>
 	<!-- FIM do Tema de introdução -->
 
-	<!-- BLOCO 01 - Serviços offerecidos -->
+	<!-- BLOCO 01 - Serviços oferecidos -->
 		<section id="services" class="info-section text-white bg-right bg-dark">
 			<div class="container">
 				<div class="row">
+					<div class="col-md-2"></div>
 					<div class="col-md-8">
 						<div class="head-box">
-							<h2 class="font-abril ">Serviços oferecidos!</h2>
+							<h2 class="font-abril text-center">Nossos serviços!</h2>
 						</div>
-						<div class="three-panel-block mt-5">
+						<div class="three-panel-block mt-5 ">
 							<!-- DIV serviços oferecidos -->
 							<div class="row">
-								<div class="col-lg-6 col-md-6 col-sm-6">
+								<div class="col-lg-6 col-md-6 col-sm-2">
 									<div class="service-block mb-5">
-										<i class="icon-box mb-3 float-left w-100"><img src="img/icons/scissors.png" class="img-fluid"></i>
+										<i class="icon-box mb-3 float-left w-100"><img src="img/icons/network.png" class="img-fluid"></i>
 										<h3 class="text-primary">Devops</h3>
 										<p>Never in all their history have men been able truly to conceive of the world as one a single sphere</p>
 									</div>
 								</div>
 								<div class="col-lg-6 col-md-6 col-sm-6">
 									<div class="service-block mb-5">
-										<i class="icon-box mb-3 float-left w-100"><img src="img/icons/razor-1.png" class="img-fluid"></i>
+										<i class="icon-box mb-3 float-left w-100"><img src="img/icons/server.png" class="img-fluid"></i>
 										<h3 class="text-primary">Infra Ágil</h3>
 										<p>Infraestrutura como código, automação de rotinas e construção de ambientes.</p>
 									</div>
 								</div>
 								<div class="col-lg-6 col-md-6 col-sm-6">
 									<div class="service-block mb-5">
-										<i class="icon-box mb-3 float-left w-100"><img src="img/icons/brush.png" class="img-fluid"></i>
+										<i class="icon-box mb-3 float-left w-100"><img src="img/icons/graphic.png" class="img-fluid"></i>
 										<h3 class="text-primary">Monitoramento</h3>
 										<p>Zabbix, Graphana, Cacti ou Nagios, experiencia de monitoramento com mais de 2000 devices com SLA e acionamento remoto!</p>
 									</div>
 								</div>
 								<div class="col-lg-6 col-md-6 col-sm-6">
 									<div class="service-block">
-										<i class="icon-box mb-3 float-left w-100"><img src="img/icons/hair-clip.png" class="img-fluid"></i>
+										<i class="icon-box mb-3 float-left w-100"><img src="img/icons/hosting.png" class="img-fluid"></i>
 										<h3 class="text-primary">Virtualização</h3>
 										<p>Cloud publica ou privada, migração para a nuvem ou construção do cluster On-premisses, temos profissionais experientes e com casos de sucesso.</p>
 									</div>
@@ -147,7 +139,8 @@
 	<!-- FIM do BLOCO 01 - Serviços offerecidos -->
 
 	<!-- BLOCO 02 - Sobre nós -->
-		<section id="about" class="copy-content-sec sec-bg-02 h-100">
+		<section id="about" class="copy-content-sec sec-bg-02">
+		<!-- <section id="about" class="copy-content-sec sec-bg-02 h-100"> -->
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-5 col-md-12 copy-container ml-auto">
@@ -162,7 +155,6 @@
 								Analistas Sêniors e Plenos, Engenheiros de Software e Devops.
 							</p>
 							<p class="mt-4 ml-2">
-								<a href="#" class="text-primary">Leia Mais</a>
 							</p>
 						</div>
 					</div>
@@ -172,7 +164,7 @@
 	<!-- FIM do BLOCO 02 - Sobre nós -->
 
 	<!-- BLOCO 03 - Ultimos Cases -->
-		<section id="price" class="info-section sec-bg-03 bg-overlay">
+		<section id="cases" class="info-section sec-bg-03 bg-overlay">
 			<div class="container text-white">
 				<div class="head-box text-center mb-5">
 					<h2 class="font-abril">Nossos ultimos Cases</h2>
@@ -214,7 +206,7 @@
 	<!-- FIM BLOCO 03 - Ultimos Cases -->
 
 	<!-- BLOCO 04 - Depoimento dos clientes-->
-		<section id="testimonial" class="testimonial-section sec-bg-04 py-5 h-100">
+		<section id="portifolio" class="testimonial-section sec-bg-04 py-5 h-100">
 			<div class="container">
 				<div class="row">
 					<div class="head-box text-center mb-3 col-md-12 mt-5">
@@ -265,69 +257,112 @@
 		</section>
 	<!-- FIM do BLOCO 04 - Depoimento dos clientes-->
 
-	<!-- Rodapé - Footer -->
-		<section id="contato" class="contact-section">
-			<div class="copy-footer bg-primary py-2">
-				<footer id="myFooter">
-					<div class="container">
-						<div class="row">
-							<!--primeira coluna-->
-							<div class="col-sm-3">
-								<h6 class="text-uppercase font-weight-bold">
-									<strong>Contatos</strong>
-								</h6>
-								<hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-								<p>
-								<i class="fa fa-phone mr-3"></i><a href="tel:123-456-7890">(11) 1234-1234</a></p>	
-								<p>
-								<i class="fa fa-whatsapp mr-3"></i><a href="tel:123-456-7890">(11) 95617-8782</a></p>
-								<p>
-								<i class="fa fa-envelope mr-3"></i> contato@gpit.com.br</p>
-								<p>
-								<i class="fa fa-home mr-3"></i> Rua caieiras, São Paulo / SP 785</p>
-							</div>
-							<!--/.primeira coluna -->
-							<!--segunda coluna-->							
-							<div class="col-sm-5">
-								<form>
-									<div class="form-group">
-									<label for="insertname">Nome</label>
-									<input type="text" class="form-control" id="insertname" placeholder="Digite aqui seu nome">
-									</div>
-									<div class="form-group">
-										<label for="insertemail">Endereço de email</label>
-										<input type="email" class="form-control" id="insertemail" placeholder="Digite aqui seu email">
-									</div>
-									<div class="form-group">
-									<label for="insertmensagem">Mensagem</label>
-									<textarea class="form-control" id="insertmensagem" rows="2" placeholder="Digite aqui sua mensagem"></textarea>
-									</div>
-								</form>
-							</div>
-							<!-- /. segunda coluna-->							
-							<div class="col-sm-4">
-									<iframe id="map-container" frameborder="0" style="border:0"
-									src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ0WGkg4FEzpQRrlsz_whLqZs&key=AIzaSyBdJm9Amm4KALkKlZObWn40dcpRyH119zg" >
-								</iframe>
+	<!-- BLOCO 05 - Contato -->
+	<section id="contato" class="contact-section h-100 bg-dark">
+		<div class="container mt-5 mb-4 text-center text-md-left">
+			<div class="row mt-3 text-white">
+				
+				<!-- primeira coluna -->			
+				<div class="col-md-4 col-lg-4 col-xl-3 mb-4">
+					<h6 class="text-uppercase font-weight-bold">
+						<strong>Onde estamos!</strong>				
+					</h6>
+					<hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+					<div class="google-map"><iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0Dx_boXQiwvdz8sJHoYeZNVTdoWONYkU&amp;q=place_id:ChIJ0WGkg4FEzpQRrlsz_whLqZs" allowfullscreen=""></iframe></div>
+				</div>
+				<!-- FIM primeira coluna -->				
+
+				<!-- Segunda coluna -->	
+				<div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
+					<h6 class="text-uppercase font-weight-bold">
+							<strong>Envia sua mensagem!</strong>				
+					</h6>
+					<hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+					<form>
+						<div class="form-group">
+								<div class="col-md-12 inputGroupContainer">
+							<div class="input-group">
+							<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+							<input  name="first_name" placeholder="Insira seu nome" class="form-control"  type="text">
+								</div>
 							</div>
 						</div>
-						<!-- Here we use the Google Embed API to show Google Maps. -->
-						<!-- In order for this to work in your project you will need to generate a unique API key.  -->
+
+						<div class="form-group">
+								<div class="col-md-12 inputGroupContainer">
+							<div class="input-group">
+							<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+							<input  name="first_name" placeholder="Insira seu Telefone" class="form-control"  type="text">
+								</div>
+							</div>
+						</div>
 						
+						<div class="form-group">
+							<div class="col-md-12 inputGroupContainer">
+							<div class="input-group">
+							<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+							<input  name="first_name" placeholder="Insira seu email" class="form-control"  type="text">
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="col-md-12 inputGroupContainer">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+									<textarea type="text" id="message" name="message" rows="2" placeholder="Insira sua mensagem!" class="form-control md-textarea"></textarea>
+								</div>
+							</div>
+						</div>
+
+					</form>
+					<div class="center-on-small-only">
+							<a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Enviar</a>
 					</div>
-					<div class="footer-copyright">
-						<p>© 2018 Direitos reservados </p>
-					</div>
-				</footer>
+					<div class="status"></div>
+				</div>
+				<!-- FIM Segunda coluna -->
+				
+				<!-- Terceira coluna -->	
+				<div class="col-md-4 col-lg-3 col-xl-3">
+					<h6 class="text-uppercase font-weight-bold">
+						<strong>Contato</strong>
+					</h6>
+					<hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+					<p>
+						<i class="fa fa-phone mr-3"></i> + (55) 11 4899-0530</p>
+					<p>
+						<i class="fa fa-whatsapp mr-3"></i> + (55) 11 91234-1234</p>
+					<p>
+						<i class="fa fa-envelope mr-3"></i> contato@gpit.com.br</p>						
+					<p>
+						<i class="fa fa-linkedin mr-3"></i> fabiodacruz@linkedin.com</p>
+				</div>
+				<!-- Fim terceira coluna -->	
+		
 			</div>
-		</section>
-	<!-- FIM do Rodapé - Footer -->
+			
+								  
+	</section>
+
+	<!-- footer -->
+		<div class="copy-footer bg-primary py-2">
+			<div class="container text-center text-light">
+				<a href="#" target="_blank">gpit.com.br</a> &copy; <span id="year"></span></i>
+			</div>
+		</div>
+	<!-- /. fim footer -->
+
 
 	<!-- Scripts em Javascript para exibir o mapa -->
 		<script src="js/bootstrap.min.js" ></script>
+		<script src="js/gmap-custom.js" ></script>
 		<script src="js/core.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<!-- FIM dos Scripts em Javascript para exibir o mapa -->
+		<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  		<script src="lib/magnific-popup/magnific-popup.min.js"></script>
+  		<script src="lib/sticky/sticky.js"></script>
+		<script src="lib/jquery/jquery.min.js"></script>
+		<script src="js/main.js"></script>
+	<!-- /. Fim Scripts em Javascript para exibir o mapa -->	
 </body>
 </html>

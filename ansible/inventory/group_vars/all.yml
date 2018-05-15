@@ -1,3 +1,10 @@
 ---
 # Variables global to all tasks
 terraform_version: 0.11.7
+
+# Variables global for environment GCE
+
+# Path with files terraform
+project_dir: /var/gcp
+
+# Variables global to environment AWS
