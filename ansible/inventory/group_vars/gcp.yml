@@ -1,0 +1,5 @@
+---
+# Variables global for environment GCP
+
+# Path with files terraform
+project_dir: roles/terraform/gcp
