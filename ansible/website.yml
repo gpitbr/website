@@ -6,11 +6,6 @@
   connection: local
     
   pre_tasks:
-    - name: Update OS
-      yum:
-        name: "*"
-        state: latest
-    
     - name: Install packages requirements
       package: name={{item}} state=latest
       with_items:
@@ -22,12 +17,28 @@
         dest: /usr/bin
         remote_src: True
   roles:
-    - deploy
+    - terraform
 
 - name: Configurando nginx web server
   hosts: aws:gcp
   become: True
   gather_facts: True
+
+  pre_tasks:
+  - name: Update OS
+    yum: name="*" state=latest update_cache=yes
+    tags:
+      - pre_reques
+
+  - name: Install packages requirements
+    yum: name={{item}} state=latest update_cache=yes
+    with_items:
+      - vim
+      - git
+      - wget
+    tags:
+      - pre_reques
   roles:
     - nginx
+    - deploy
 

@@ -1,5 +1,0 @@
----
-# Variables global for environment GCE
-
-# Path with files terraform
-project_dir: roles/deploy/gce

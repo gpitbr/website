@@ -1,12 +1,4 @@
 ---
-- name: Update OS
-  yum: name="*" state=latest update_cache=yes
-
-- name: Install pre-requirements
-  yum: name={{item}} state=latest update_cache=yes
-  with_items:
-   - vim
-
 - name: Copy template nginx.repo
   template: src=nginx.repo.j2 dest=/etc/yum.repos.d/nginx.repo
   
