@@ -1,39 +1,23 @@
 ---
-- include_vars:
-    file: inventory/group_vars/{{perfil}}.yml
+- name: Clone the code {{project_name}} to the docroot desenv
+  git:
+    repo: "{{project_repo}}"
+    dest: "{{project_root}}/dev/{{project_name}}"
+    version: master
+    clone: yes
+    update: yes
+  notify: Test nginx e reload
   tags:
-    - deploy
-    
-- name: Init State
-  command: terraform init -get=true -input=false
-  register: _terraform_init_state
-  changed_when: false
-  args:
-     chdir: "{{ project_dir }}"
-  tags:
-    - terraform_plan
+    - deploy_dev
 
-- name: Plan
-  terraform:
-    project_path: "{{ project_dir }}"
-    plan_file: 'tfplan'
-    lock: true
-    state: planned
-  tags: 
-    - terraform_plan
+- name: Clone the code {{project_name}} to the docroot production
+  git:
+    repo: "{{project_repo}}"
+    dest: "{{project_root}}/prod/{{project_name}}"
+    version: master
+    clone: yes
+    update: yes
+  notify: Test nginx e reload
+  tags:
+   - deploy_prod
 
-- name: Apply
-  terraform:
-    project_path: "{{ project_dir }}"
-    lock: true
-    state: present
-  tags:
-    - terraform_plan
-    
-- name: Destroy
-  terraform:
-    project_path: "{{ project_dir }}"
-    lock: true
-    state: absent
-  tags:
-    - terraform_destroy
