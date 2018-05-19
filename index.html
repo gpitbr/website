@@ -16,7 +16,7 @@
 	<link rel="stylesheet" type="text/css" href="css/loaders.css"/>
 	<link href="lib/animate/animate.min.css" rel="stylesheet">
 	
-	<!-- Biblioteca de framworks -->
+	<!-- Biblioteca de frameworks -->
 	<link rel="stylesheet" type="text/css" href="lib/font-awesome/css/font-awesome.min.css">
 	<link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
 
@@ -25,6 +25,17 @@
 
 </head>
 <body>
+
+	<!-- Animação carregamento da página -->
+	<div class="loader loader-bg">
+		<div class="loader-inner ball-pulse">
+			<!--  barras do loading do site -->
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</div>
+
 
 	<!-- Barra superior -->
 	<header id="header">
@@ -53,10 +64,10 @@
 				        	<a class="nav-link" href="#about">Sobre nós</a>
 				    	</li>
 				    	<li class="nav-item">
-				        	<a class="nav-link" href="#price">Cases</a>
+				        	<a class="nav-link" href="#">Cases</a>
 				    	</li>
 				    	<li class="nav-item">
-				        	<a class="nav-link" href="#testimonial">Portifólio</a>
+				        	<a class="nav-link" href="#">Portifólio</a>
 				    	</li>
 				    	<li class="nav-item">
 				        	<a class="nav-link" href="#contact">Contato</a>
@@ -87,10 +98,10 @@
 
 
 	<!-- Serviços -->
-	<section id="services" class="info-section bg-right">
+	<section id="services" class="info-section">
 		<div class="container">
 			
-			<header class="section-header wow fadeInUp">
+			<header class="section-header">
 	          <h3>Serviços</h3>
 	          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 	          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -201,7 +212,7 @@
     </section>
 
 
-	<!-- Info block 2 -->
+	<!-- Info block 2
 	<section id="price" class="info-section sec-bg-03 bg-overlay">
 		<div class="container text-white">
 			<div class="head-box text-center mb-5">
@@ -241,9 +252,10 @@
 			</div>
 		</div>
 	</section>
+	-->
 
 
-	<!-- Testimonial Block 01-->
+	<!-- Testimonial Block 01
 	<section id="testimonial" class="testimonial-section sec-bg-04 py-5 h-100">
 		<div class="container">
 			<div class="row">
@@ -293,6 +305,7 @@
 			</div>
 		</div>
 	</section>
+	-->
 
 
 	<!-- Contact Block
@@ -348,74 +361,74 @@
 	-->
 
 
-	<!-- Contact Section  -->
-    <section id="contact" class="section-bg wow fadeInUp">
-    
-      <div class="container">
+	<!-- Seção fale conosco -->
+	<section id="contact" class="conosco-section py-5 h-100">
+    	<div class="container">
+	        <div class="secao-faleconosco">
+    		    <h3>Fale Conosco!</h3>
+        	</div>
 
-        <div class="section-header">
-          <h3>Contact Us</h3>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
-        </div>
+        	<!-- Dados de contato -->
+        	<div class="row contact-info">
+	        	<div class="col-md-4">
+    		        <div class="contact-address">
+            			<i class="ion-ios-location-outline"></i>
+              			<h3>Região</h3>
+              			<address>SP / RJ / MG</address>
+            		</div>
+          		</div>
 
-        <div class="row contact-info">
+        		<div class="col-md-4">
+            		<div class="contact-phone">
+              			<i class="ion-ios-telephone-outline"></i>
+              			<h3>Telefone</h3>
+              			<p><a href="tel:1148990530">(11) 4899-0530</a></p>
+            		</div>
+          		</div>
 
-          <div class="col-md-4">
-            <div class="contact-address">
-              <i class="ion-ios-location-outline"></i>
-              <h3>Address</h3>
-              <address>A108 Adam Street, NY 535022, USA</address>
-            </div>
-          </div>
+        		<div class="col-md-4">
+            		<div class="contact-email">
+              			<i class="ion-ios-email-outline"></i>
+              			<h3>Email</h3>
+              			<p><a href="mailto:contato@gpit.com.br">contato@gpit.com.br</a></p>
+            		</div>
+          		</div>
+	        </div>
 
-          <div class="col-md-4">
-            <div class="contact-phone">
-              <i class="ion-ios-telephone-outline"></i>
-              <h3>Phone Number</h3>
-              <p><a href="tel:+155895548855">+1 5589 55488 55</a></p>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="contact-email">
-              <i class="ion-ios-email-outline"></i>
-              <h3>Email</h3>
-              <p><a href="mailto:info@example.com">info@example.com</a></p>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="form">
-          <div id="sendmessage">Your message has been sent. Thank you!</div>
-          <div id="errormessage"></div>
-          <form action="" method="post" role="form" class="contactForm">
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                <div class="validation"></div>
-              </div>
-              <div class="form-group col-md-6">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                <div class="validation"></div>
-              </div>
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-              <div class="validation"></div>
-            </div>
-            <div class="form-group">
-              <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-              <div class="validation"></div>
-            </div>
-            <div class="text-center"><button type="submit">Send Message</button></div>
-          </form>
-        </div>
-
-      </div>
+	        <!-- Enviar mensagem -->
+	        <div class="form">
+    		    <div id="sendmessage">Sua mensagem foi enviada com sucesso!
+    		    </div>
+          		<div id="errormessage"></div>
+          		<form action="" method="post" role="form" class="contactForm">
+	            	<div class="form-row">
+	              		<div class="form-group col-md-6">
+	                		<input type="text" name="name" class="form-control" id="name" placeholder="Seu nome" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+	                		<div class="validation"></div>
+	              		</div>
+	              		<div class="form-group col-md-6">
+	                		<input type="email" class="form-control" name="email" id="email" placeholder="Seu email" data-rule="email" data-msg="Please enter a valid email" />
+	                		<div class="validation"></div>
+	            		</div>
+	        		</div>
+					<div class="form-group">
+						<input type="text" class="form-control" name="subject" id="subject" placeholder="Assunto" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+						<div class="validation"></div>
+		    		</div>
+		    		<div class="form-group">
+						<textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Mensagem"></textarea>
+		        		<div class="validation"></div>
+		    		</div>
+	    			<div class="text-center"><button type="submit">Enviar mensagem</button>
+	    			</div>
+				</form>
+        	</div>
+		</div>
     </section><!-- #contact -->
 
-	<!-- footer Block -->
+
+
+	<!-- footer Block 
 	<div class="copy-footer bg-primary py-2">
 		<div class="container text-center text-light">
 			&copy; <a href="http://gpit.com.br" target="_blank">gpit.com.br</a> <span id="year"></span>. Direitos reservados. Criado com <i class="fa fa-cogs"><a href="http://Seiri.com.br" target="_blank"> Seiri.com.br</i>
@@ -423,6 +436,8 @@
 	</div>
 
 	<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+	-->
+
 
 	<!-- Javascript Files  -->
 	<script src="lib/jquery/jquery.min.js"></script>

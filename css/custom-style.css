@@ -60,7 +60,7 @@
 	}
 
 
-/* ========== Universal Stylings ========== */
+/* ========== Estilo Universal ========== */
 	h1,h2,h3,h4,h5{
 		position: relative;
 		font-family: 'Montserrat', sans-serif;
@@ -189,25 +189,14 @@
 		top:0;
 		z-index: -1;
 	}
-	.bg-right{
-		background:url("../img/sec-bg-01.jpg");
-		background-repeat: no-repeat;
-		background-position: top right;
-	}
-	.sec-bg-02{
-		background:url("../img/sec-bg-02.jpg");
-		background-repeat: no-repeat;
-		background-position: top left;	
-		background-size: cover;
-	}
 	.sec-bg-03{
 		background:url("../img/sec-bg-03.jpg");
 		background-repeat: no-repeat;
 		background-position: top left;	
 		background-size: cover;
 	}
-	.sec-bg-04{
-		background:url("../img/sec-bg-04.jpg");
+	.bg-faleconosco{
+		background:url("../img/bg-faleconosco.jpg");
 		background-repeat: no-repeat;
 		background-position: top left;	
 		background-size: cover;
@@ -808,6 +797,161 @@
 	}
 
 
+/* Contact Section
+--------------------------------*/
+	#contact {
+	  padding: 60px 0;
+	}
+
+	#contact .contact-info {
+	  margin-bottom: 20px;
+	  text-align: center;
+	}
+
+	#contact .contact-info i {
+	  font-size: 48px;
+	  display: inline-block;
+	  margin-bottom: 10px;
+	  color: #B47F41;
+	}
+
+	#contact .contact-info address, #contact .contact-info p {
+	  margin-bottom: 0;
+	  color: #000;
+	}
+
+	#contact .contact-info h3 {
+	  font-size: 18px;
+	  margin-bottom: 15px;
+	  font-weight: bold;
+	  text-transform: uppercase;
+	  color: #999;
+	}
+
+	#contact .contact-info a {
+	  color: #000;
+	}
+
+	#contact .contact-info a:hover {
+	  color: #B47F41;
+	} /* Icones da caixa contato */
+
+	#contact .contact-address, #contact .contact-phone, #contact .contact-email {
+	  margin-bottom: 20px;
+	}
+
+	@media (min-width: 768px) {
+	  #contact .contact-address, #contact .contact-phone, #contact .contact-email {
+	    padding: 20px 0;
+	  }
+	}
+
+	@media (min-width: 768px) {
+	  #contact .contact-phone {
+	    border-left: 1px solid #ddd;
+	    border-right: 1px solid #ddd;
+	  }
+	}
+
+	#contact .form #sendmessage {
+	  color: #B47F41;
+	  border: 1px solid #B47F41;
+	  display: none;
+	  text-align: center;
+	  padding: 15px;
+	  font-weight: 600;
+	  margin-bottom: 15px;
+	}
+
+	#contact .form #errormessage {
+	  color: red;
+	  display: none;
+	  border: 1px solid red;
+	  text-align: center;
+	  padding: 15px;
+	  font-weight: 600;
+	  margin-bottom: 15px;
+	}
+
+	#contact .form #sendmessage.show, #contact .form #errormessage.show, #contact .form .show {
+	  display: block;
+	}
+
+	#contact .form .validation {
+	  color: red;
+	  display: none;
+	  margin: 0 0 20px;
+	  font-weight: 400;
+	  font-size: 13px;
+	}
+
+	#contact .form input, #contact .form textarea {
+	  padding: 10px 14px;
+	  border-radius: 0;
+	  box-shadow: none;
+	  font-size: 15px;
+	}
+
+	#contact .form button[type="submit"] {
+	  background: #B47F41;
+	  border: 0;
+	  padding: 10px 30px;
+	  color: #fff;
+	  transition: 0.4s;
+	  cursor: pointer;
+	}
+
+	#contact .form button[type="submit"]:hover {
+	  background: #13a456;
+	}
+
+/* ========== Seção fale conosco ========== */
+	.conosco-section{
+		float: left;
+		width:100%;
+		position: relative;
+		z-index: 1;
+	}
+	.conosco-section h2{
+		font-size: 3rem;
+	}
+	.conosco-section .single-conosco .carousel-item {
+	    margin: 0 15%;
+	    width: 70%;
+	}
+	.conosco-section .single-conosco .carousel-item-next, 
+	.testimonial-section .single-testimonial .carousel-item-prev{
+		top:3rem;
+	}
+	.conosco-section .single-conosco .carousel{
+		text-align: center;
+	}
+	.conosco-section .single-conosco .navigator-box{
+		display: inline-block;
+		position: relative;
+	    top: 0px;
+	}
+	.conosco-section .single-conosco .carousel-control-next, 
+	.testimonial-section .single-testimonial .carousel-control-prev{
+		 border: 1px solid #b47f41;
+	    border-radius: 50%;
+	    color: #b47f41;
+	    display: block;
+	    float: left;
+	    font-size: 37px;
+	    margin: 0 4px;
+	    opacity: 1;
+	    padding: 0 23px;
+	    position: relative;
+	    width: 43%;
+	}
+	.conosco-section .single-conosco .carousel-control-next:hover, 
+	.testimonial-section .single-testimonial .carousel-control-prev:hover{
+		background-color: #b47f41;
+		color: #fff;
+	}
+
+
 /*  Seções  */
 /* Serviços */
 	.section-header h3 { /* Caixa de serviços */
@@ -1404,9 +1548,6 @@
 		.widget.widget-counter .container{
 			width: 100%;
 		}
-		.contact-section #map {
-	    	height: 400px
-		}
 		#navbarSupportedContent{
 		background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0!important;
 		padding: 30px 0
@@ -1421,3 +1562,18 @@
 		}
 
 	}
+
+	/* Seções */
+	/* Seção Fale conosco */
+	.secao-faleconosco h3 { /* Caixa de serviços */
+	  font-size: 32px;
+	  color: #000;
+	  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	  text-transform: uppercase;
+	  text-align: center;
+	  font-weight: 700;
+	  position: relative;
+	  padding: 30px;
+	  padding-bottom: 15px;
+	}
+
