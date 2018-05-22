@@ -32,8 +32,8 @@ install:
   - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible-lint; fi
 
 script:
-  - pytest
-  
+  - ansible-playbook ansible/website.yml --syntax-check
+
 # jobs:
 #  include:
 #    - stage: test
@@ -43,9 +43,6 @@ script:
 
 jobs:
   include:
-    - stage: unit-tests
-      scripts:
-        - ansible-playbook ansible/website.yml --syntax-check
     - stage: deploy_dev
       scripts:
         - echo "Deploying";
