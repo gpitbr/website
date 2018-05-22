@@ -8,8 +8,8 @@ before_deploy:
 - openssl aes-256-cbc -K $encrypted_138890a96bfe_key -iv $encrypted_138890a96bfe_iv
   -in aws-note-agility.enc -out ~\/.ssh/aws-note-agility -d
 - eval "$(ssh-agent -s)"
-- chmod 600 /tmp/aws-note-agility
-- ssh-add /tmp/aws-note-agility
+- chmod 600 ~\/.ssh/aws-note-agility
+- ssh-add ~\/.ssh/aws-note-agility
 
 jobs:
   include:
