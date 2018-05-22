@@ -25,14 +25,16 @@ stages:
 
 before_install:
   - sudo apt-get update -qq
+  #- if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible; else pip install ansible==$ANSIBLE_VERSION; fi
+  #- if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible-lint; fi
 
 install:
   # Install Ansible.
   - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible; else pip install ansible==$ANSIBLE_VERSION; fi
   - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible-lint; fi
 
-script:
-  - ansible-playbook ansible/website.yml --syntax-check
+#script:
+#  - ansible-playbook ansible/website.yml --syntax-check
 
 # jobs:
 #  include:
@@ -43,6 +45,9 @@ script:
 
 jobs:
   include:
+    - stage: unit-tests
+      scripts:
+        - echo "one"
     - stage: deploy_dev
       scripts:
         - echo "Deploying";
