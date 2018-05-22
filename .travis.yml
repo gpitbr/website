@@ -20,6 +20,6 @@ install:
   - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible; else pip install ansible==$ANSIBLE_VERSION; fi
   - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible-lint; fi
 
-  script:
-    # Check the roles playbook website.yml syntax
-    - ansible-playbook ansible/website.yml --syntax-check
+script:
+  # Check the roles playbook website.yml syntax
+  - ansible-playbook ansible/website.yml --syntax-check
