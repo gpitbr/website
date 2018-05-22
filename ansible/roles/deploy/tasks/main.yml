@@ -3,7 +3,7 @@
   git:
     repo: "{{project_repo}}"
     dest: "{{project_root}}/dev/{{project_name}}"
-    version: master
+    version: desenv
     clone: yes
     update: yes
   notify: Test nginx e reload
