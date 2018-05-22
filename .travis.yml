@@ -1,18 +1,20 @@
 language: python
-python: "2.7"
-
+python: '2.7'
 jobs:
   include:
-    - stage: "deploy_dev"
-      if: branch = desenv AND NOT type pull_request
-      before_install:
-        - sudo apt-get update -qq
-        - sudo apt-get install -qq python-apt python-pycurl
-      install:
-        - pip install ansible
-      script:
-        - echo "Tests initial";
-        - ansible-playbook ansible/website.yml --syntax-check
-        - echo "Deploying in dev";
-        - ansible-playbook ansible/website.yml -l aws -t deploy_dev --private-key=$SSH_KEY
-        - echo "Deployed run with success";
+  - stage: deploy_dev
+    if: branch = desenv AND NOT type pull_request
+    before_install:
+    - sudo apt-get update -qq
+    - sudo apt-get install -qq python-apt python-pycurl
+    install:
+    - pip install ansible
+    script:
+    - echo "Tests initial";
+    - ansible-playbook ansible/website.yml --syntax-check
+    - echo "Deploying in dev";
+    - ansible-playbook ansible/website.yml -l aws -t deploy_dev --private-key=$SSH_KEY
+    - echo "Deployed run with success";
+before_install:
+- openssl aes-256-cbc -K $encrypted_138890a96bfe_key -iv $encrypted_138890a96bfe_iv
+  -in aws-note-agility.enc -out ~\/.ssh/aws-note-agility -d
