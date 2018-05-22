@@ -10,7 +10,6 @@ env:
 
 branches:
   only:
-    - master
     - desenv
 
 before_install:
@@ -26,4 +25,4 @@ script:
   - ansible-playbook ansible/website.yml --syntax-check
   
   # Run role/deploy in env desenv - aws
-  - ansible-playbook ansible/website.yml -l aws -t deploy_dev
+  #- ansible-playbook ansible/website.yml -l aws -t deploy_dev
