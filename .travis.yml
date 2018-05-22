@@ -34,7 +34,7 @@ install:
 
 #script:
 #  - ansible-playbook ansible/website.yml --syntax-check
-   - echo "Fabio"
+   - echo "Fabio";
 
 # jobs:
 #  include:
