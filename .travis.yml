@@ -3,18 +3,16 @@ python: "2.7"
 
 jobs:
   include:
-    - stage: "install-ansibe"
+    - stage: "deploy_dev"
+      if: branch = desenv
       before_install:
         - sudo apt-get update -qq
         - sudo apt-get install -qq python-apt python-pycurl
       install:
         - pip install ansible
       script:
+        - echo "Tests initial";
         - ansible-playbook ansible/website.yml --syntax-check
-
-    - stage: "deploy_dev"
-      if: branch = desenv
-      script:
         - echo "Deploying";
         - ansible-playbook ansible/website.yml -l aws -t deploy_dev
-        - echo "Deployed"
+        - echo "Deployed";
