@@ -25,14 +25,16 @@ stages:
 
 before_install:
   - sudo apt-get update -qq
+  - pip install ansible
+  - pip install ansible-lint
 
-install:
+#install:
   # Install Ansible.
-  - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible; else pip install ansible==$ANSIBLE_VERSION; fi
-  - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible-lint; fi
+  #- if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible; else pip install ansible==$ANSIBLE_VERSION; fi
+#  - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible-lint; fi
 
-script:
-  - ansible-playbook ansible/website.yml --syntax-check
+#script:
+#  - ansible-playbook ansible/website.yml --syntax-check
 # jobs:
 #  include:
 #    - stage: test
