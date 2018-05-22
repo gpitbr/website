@@ -45,7 +45,7 @@ install:
 
 jobs:
   include:
-      scripts:
+    - scripts:
         - ansible-playbook ansible/website.yml --syntax-check
     - stage: deploy_dev
       scripts:
