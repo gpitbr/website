@@ -17,8 +17,7 @@ stages:
   - name: deploy_dev
   - name: deploy_prd
     if: branch = desenv AND NOT type pull_request
-
-
+    
 #branches:
 #  only:
 #  - master
@@ -38,6 +37,10 @@ jobs:
       script:
        # Check the roles playbook website.yml syntax
         - ansible-playbook ansible/website.yml --syntax-check
-  
+
+jobs:
+  include:
+    - stage: deploy_dev
+      scripts:
   # Run role/deploy in env desenv - aws
-  #- ansible-playbook ansible/website.yml -l aws -t deploy_dev
+        - ansible-playbook ansible/website.yml -l aws -t deploy_dev
