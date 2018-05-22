@@ -1,54 +1,20 @@
----
-sudo: required
-dist: trusty
-
 language: python
 python: "2.7"
 
-#cache:
-#  directories
-#    - python
-
-env:
-  - ANSIBLE_VERSION=latest
-
-stages:
-  #- name: unit-tests
-  - name: deploy_dev
-  - name: deploy_prd
-    if: branch = desenv AND NOT type pull_request
-
-#branches:
-#  only:
-#  - master
-#  - desenv
-
-before_install:
-  - sudo apt-get update -qq
-  #- if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible; else pip install ansible==$ANSIBLE_VERSION; fi
-  #- if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible-lint; fi
-
-install:
-  # Install Ansible.
-  - pip install ansible
-
-#script:
-#  - ansible-playbook ansible/website.yml --syntax-check
-#  - echo "Fabio";
-
-# jobs:
-#  include:
-#    - stage: test
-#      script:
-#       # Check the roles playbook website.yml syntax
-#        - ansible-playbook ansible/website.yml --syntax-check
-
 jobs:
   include:
-    - scripts:
+    - stage: "install-ansibe"
+      before_install:
+        - sudo apt-get update -qq
+        - sudo apt-get install -qq python-apt python-pycurl
+      install:
+        - pip install ansible
+      script:
         - ansible-playbook ansible/website.yml --syntax-check
-    - stage: deploy_dev
-      scripts:
+
+    - stage: "deploy_dev"
+      if: branch = desenv
+      script:
         - echo "Deploying";
         - ansible-playbook ansible/website.yml -l aws -t deploy_dev
         - echo "Deployed"
