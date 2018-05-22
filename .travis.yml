@@ -13,7 +13,7 @@ env:
   - ANSIBLE_VERSION=latest
 
 stages:
-  - name: test
+  - name: unit-tests
   - name: deploy_dev
   - name: deploy_prd
     if: branch = desenv AND NOT type pull_request
@@ -31,6 +31,8 @@ install:
   - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible; else pip install ansible==$ANSIBLE_VERSION; fi
   - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible-lint; fi
 
+script:
+  - ansible-playbook ansible/website.yml --syntax-check
 # jobs:
 #  include:
 #    - stage: test
@@ -40,7 +42,7 @@ install:
 
 jobs:
   include:
-    - stage: test
+    - stage: unit-tests
       scripts:
         - ansible-playbook ansible/website.yml --syntax-check
     - stage: deploy_dev
