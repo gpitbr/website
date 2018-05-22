@@ -10,7 +10,7 @@ env:
 
  branches:
     only:
-      - desenv
+      - master
 
 before_install:
   - yum update -y
