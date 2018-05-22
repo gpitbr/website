@@ -6,11 +6,11 @@ language: python
 python: "2.7"
 
 env:
- - ANSIBLE_VERSION=latest
+  - ANSIBLE_VERSION=latest
 
- branches:
-    only:
-      - master
+branches:
+  only:
+    - master
 
 before_install:
   - yum update -y
