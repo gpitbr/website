@@ -1,16 +1,13 @@
 language: python
 python: '2.7'
-
 addons:
   ssh_known_hosts: 52.27.108.199
-
 before_deploy:
 - openssl aes-256-cbc -K $encrypted_138890a96bfe_key -iv $encrypted_138890a96bfe_iv
   -in aws-note-agility.enc -out ~\/.ssh/aws-note-agility -d
 - eval "$(ssh-agent -s)"
 - chmod 600 ~\/.ssh/aws-note-agility
 - ssh-add ~\/.ssh/aws-note-agility
-
 jobs:
   include:
   - stage: deploy_dev
@@ -26,3 +23,6 @@ jobs:
     - echo "Deploying in dev";
     - ansible-playbook ansible/website.yml -l aws -t deploy_dev
     - echo "Deployed run with success";
+before_install:
+- openssl aes-256-cbc -K $encrypted_138890a96bfe_key -iv $encrypted_138890a96bfe_iv
+  -in deploy_rsa.enc -out deploy_rsa -d
