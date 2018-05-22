@@ -32,7 +32,7 @@ install:
   # Install Ansible.
   - pip install ansible
 
-#script:
+script:
 #  - ansible-playbook ansible/website.yml --syntax-check
   - echo "Fabio";
 
