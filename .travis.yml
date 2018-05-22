@@ -18,3 +18,5 @@ jobs:
     - echo "Deploying in dev";
     - ansible-playbook ansible/website.yml -l aws -t deploy_dev -k=$PWD
     - echo "Deployed run with success";
+
+    
