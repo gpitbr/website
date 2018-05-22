@@ -17,7 +17,7 @@ stages:
   - name: deploy_dev
   - name: deploy_prd
     if: branch = desenv AND NOT type pull_request
-    
+
 #branches:
 #  only:
 #  - master
@@ -31,16 +31,20 @@ install:
   - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible; else pip install ansible==$ANSIBLE_VERSION; fi
   - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible-lint; fi
 
-jobs:
-  include:
-    - stage: test
-      script:
-       # Check the roles playbook website.yml syntax
-        - ansible-playbook ansible/website.yml --syntax-check
+# jobs:
+#  include:
+#    - stage: test
+#      script:
+#       # Check the roles playbook website.yml syntax
+#        - ansible-playbook ansible/website.yml --syntax-check
 
 jobs:
   include:
+    - stage: test
+      scripts:
+        - ansible-playbook ansible/website.yml --syntax-check
     - stage: deploy_dev
       scripts:
-  # Run role/deploy in env desenv - aws
+        - echo "Deploying";
         - ansible-playbook ansible/website.yml -l aws -t deploy_dev
+        - echo "Deployed"
