@@ -13,10 +13,10 @@ env:
   - ANSIBLE_VERSION=latest
 
 stages:
-  - test
-  - deploy_dev
-  - deploy_prd
-  if: branch = desenv AND NOT type pull_request
+  - name: test
+  - name: deploy_dev
+  - name: deploy_prd
+    if: branch = desenv AND NOT type pull_request
 
 
 #branches:
@@ -34,10 +34,10 @@ install:
 
 jobs:
   include:
-   - stage: test
-     script:
+    - stage: test
+      script:
        # Check the roles playbook website.yml syntax
-       - ansible-playbook ansible/website.yml --syntax-check
+        - ansible-playbook ansible/website.yml --syntax-check
   
   # Run role/deploy in env desenv - aws
   #- ansible-playbook ansible/website.yml -l aws -t deploy_dev
