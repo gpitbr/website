@@ -13,7 +13,7 @@ env:
   - ANSIBLE_VERSION=latest
 
 stages:
-  - name: unit-tests
+  #- name: unit-tests
   - name: deploy_dev
   - name: deploy_prd
     if: branch = desenv AND NOT type pull_request
@@ -32,9 +32,9 @@ install:
   # Install Ansible.
   - pip install ansible
 
-script:
+#script:
 #  - ansible-playbook ansible/website.yml --syntax-check
-  - echo "Fabio";
+#  - echo "Fabio";
 
 # jobs:
 #  include:
@@ -45,9 +45,8 @@ script:
 
 jobs:
   include:
-    - stage: unit-tests
       scripts:
-        - echo "one"
+        - ansible-playbook ansible/website.yml --syntax-check
     - stage: deploy_dev
       scripts:
         - echo "Deploying";
