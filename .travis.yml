@@ -14,5 +14,5 @@ jobs:
         - echo "Tests initial";
         - ansible-playbook ansible/website.yml --syntax-check
         - echo "Deploying in dev";
-        - ansible-playbook ansible/website.yml -l aws -t deploy_dev --private-key $SSH_KEY
+        - ansible-playbook ansible/website.yml -l aws -t deploy_dev --private-key=$SSH_KEY
         - echo "Deployed run with success";
