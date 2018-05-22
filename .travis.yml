@@ -1,6 +1,8 @@
 language: python
 python: '2.7'
 
+skip_cleanup: true
+
 jobs:
   include:
   - stage: deploy_dev
@@ -14,5 +16,5 @@ jobs:
     - echo "Tests initial";
     - ansible-playbook ansible/website.yml --syntax-check
     - echo "Deploying in dev";
-    - ansible-playbook ansible/website.yml -l aws -t deploy_dev -k $PWD_DEPLOY
+    - ansible-playbook ansible/website.yml -l aws -t deploy_dev -k $PWD
     - echo "Deployed run with success";
