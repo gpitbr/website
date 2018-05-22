@@ -5,13 +5,24 @@ dist: trusty
 language: python
 python: "2.7"
 
+cache:
+  directories
+    - python
+
 env:
   - ANSIBLE_VERSION=latest
 
-branches:
-  only:
-  - master
-  - desenv
+stages:
+  - test
+  - deploy_dev
+  - deploy_prd
+  if: branch = desenv AND NOT type pull_request
+
+
+#branches:
+#  only:
+#  - master
+#  - desenv
 
 before_install:
   - sudo apt-get update -qq
@@ -21,9 +32,12 @@ install:
   - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible; else pip install ansible==$ANSIBLE_VERSION; fi
   - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible-lint; fi
 
-script:
-  # Check the roles playbook website.yml syntax
-  - ansible-playbook ansible/website.yml --syntax-check
+jobs:
+  include:
+   - stage: test
+     script:
+       # Check the roles playbook website.yml syntax
+       - ansible-playbook ansible/website.yml --syntax-check
   
   # Run role/deploy in env desenv - aws
   #- ansible-playbook ansible/website.yml -l aws -t deploy_dev
