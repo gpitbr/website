@@ -1,5 +1,5 @@
 ---
-sudo: false
+sudo: required
 dist: trusty
 
 language: python
@@ -13,4 +13,4 @@ branches:
     - master
 
 before_install:
-  - yum update -y
+  - sudo apt-get update -qq
