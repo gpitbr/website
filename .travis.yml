@@ -1,0 +1,29 @@
+---
+sudo: required
+dist: trusty
+
+language: python
+python: "2.7"
+
+env:
+  - ANSIBLE_VERSION=latest
+
+branches:
+  only:
+    - master
+    - desenv
+
+before_install:
+  - sudo apt-get update -qq
+
+install:
+  # Install Ansible.
+  - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible; else pip install ansible==$ANSIBLE_VERSION; fi
+  - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible-lint; fi
+
+script:
+  # Check the roles playbook website.yml syntax
+  - ansible-playbook ansible/website.yml --syntax-check
+  
+  # Run role/deploy in env desenv - aws
+  - ansible-playbook ansible/website.yml -l aws -t deploy_dev

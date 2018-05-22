@@ -1,368 +1,453 @@
-<!-- -->
-<!-- Venha fazer seu projeto conosco e tenha as melhores práticas do mercado e uma completa documentação -->
-<!-- Elaborado por: davipiresdematos@hotmail.com -->
-<!-- -->
-
 <!DOCTYPE html>
-<html>
+<html Lang="pt-br">
 <head>
-	<!-- titulo -->
 	<title>GPIT - Consultoria OpenSource</title>
-	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Favicons -->
+  	<meta charset="utf-8">
+  	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+  	<meta content="" name="keywords">
+  	<meta content="" name="description">
+
+  	<!-- Icone Favicon -->
   	<link href="img/favicon.png" rel="icon">
-	<!-- Framework booststrap como folha de estilo -->
-	<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<link href="lib/bootstrap/js/bootstrap.min.css" rel="stylesheet">
-	<!-- Folha de estilo propria -->
+
+  	<!-- Arquivos CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/custom-style.css">
 	<link rel="stylesheet" type="text/css" href="css/loaders.css"/>
-  	<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-  	<link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
-	<!-- Framework Font-Awesome como folha de estilo -->
-	<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
-	<!-- Framework JQuery -->
-	<script  src="https://code.jquery.com/jquery-3.2.1.min.js" ></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<link href="lib/animate/animate.min.css" rel="stylesheet">
+	
+	<!-- Biblioteca de frameworks -->
+	<link rel="stylesheet" type="text/css" href="lib/font-awesome/css/font-awesome.min.css">
+	<link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+
+	<!-- Google fontes -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+
 </head>
 <body>
+
 	<!-- Animação carregamento da página -->
-		<div class="loader loader-bg">
-			<div class="loader-inner ball-pulse">
-				<!--  barras do loading do site -->
-				<div></div>
-				<div></div>
-				<div></div>
-			</div>
+	<div class="loader loader-bg">
+		<div class="loader-inner ball-pulse">
+			<!--  barras do loading do site -->
+			<div></div>
+			<div></div>
+			<div></div>
 		</div>
-	<!-- FIM da Animação carregamento da página -->
-	
-	<!-- Barra superior de navegação -->
+	</div>
+
+
+	<!-- Barra superior -->
+	<header id="header">
 		<nav class="navbar navbar-expand-md fixed-top top-nav">
 			<div class="container-fluid">
-				<a class="navbar-brand" href="index.html"><strong>GPIT</strong></a>
+      			<!-- Trabalhando o logo do lado esquerdo -->
+      			<div id="logo" class="pull-left">
+        			<h1><a href="#" class="scrollto">GPIT</a></h1>
+			    </div>
+
+			    
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"><img src="img/icons/hamburguer.png"></span>
+				    <span class="navbar-toggler-icon"><img src="img/icons/menu.png"></span>
 				</button>
+
+
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav m-auto text-sm-center text-md-center">
-						<li class="nav-item">
-						<a class="nav-link" href="#inicio">Inicio <span class="sr-only">(current)</span></a>
-						</li>
-						<li class="nav-item">
-						<a class="nav-link" href="#services">Serviços</a>
-						</li>
-						<li class="nav-item">
-						<a class="nav-link" href="#about">Sobre nós</a>
-						</li>
-						<li class="nav-item">
-						<a class="nav-link" href="#price">Cases</a>
-						</li>
-						<li class="nav-item">
-						<a class="nav-link" href="#testimonial">Portifólio</a>
-						</li>
-						<li class="nav-item">
-						<a class="nav-link" href="#contato">Contato</a>
-						</li>
-					</ul>
-				</div>
-				<div class="phone">
-					<p><i class="fa fa-phone"></i> (11) 4899-0530</p>
-				</div>
+				    	<li class="nav-item">
+				        	<a class="nav-link" href="#home">Inicio <span class="sr-only">(current)</span></a>
+				      	</li>
+					    <li class="nav-item">
+					    	<a class="nav-link" href="#services">Serviços</a>
+					    </li>
+				    	<li class="nav-item">
+				        	<a class="nav-link" href="#about">Sobre nós</a>
+				    	</li>
+				    	<li class="nav-item">
+				        	<a class="nav-link">Cases</a>
+				    	</li>
+				    	<li class="nav-item">
+				        	<a class="nav-link">Portifólio</a>
+				    	</li>
+				    	<li class="nav-item">
+				        	<a class="nav-link" href="#contact">Contato</a>
+				    	</li>
+				    </ul>
+				</div>	
+				
 			</div>
 		</nav>
-	<!-- FIM da Barra superior de navegaçãp -->
-	
-	<!-- Tema de introdução -->
-		<section id="inicio" class="intro intro-bg bg-overlay parallax">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-6 col-md-12 caption-two-panel ml-auto pt-5">
-						<div class="intro-caption mt-5">
-						<h1 class="text-white mb-2">GPIT </h1>
-						<p class="text-white mb-4">Consultoria especializada em serviços OpenSource para Médias e Grandes empresas. <br> Projetos On demand entrelaçando as mellhores práticas para disponibilidade do negócio!</p>
-						<a class="btn btn-primary text-white mr-3" href="#services">Explore Mais</a>
-					</div>
-				</div>
-			</div>
-		</section>
-	<!-- FIM do Tema de introdução -->
+	</header>
 
-	<!-- BLOCO 01 - Serviços oferecidos -->
-		<section id="services" class="info-section text-white bg-right bg-dark">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-2"></div>
-					<div class="col-md-8">
-						<div class="head-box">
-							<h2 class="font-abril text-center">Nossos serviços!</h2>
-						</div>
-						<div class="three-panel-block mt-5 ">
-							<!-- DIV serviços oferecidos -->
-							<div class="row">
-								<div class="col-lg-6 col-md-6 col-sm-2">
-									<div class="service-block mb-5">
-										<i class="icon-box mb-3 float-left w-100"><img src="img/icons/network.png" class="img-fluid"></i>
-										<h3 class="text-primary">Devops</h3>
-										<p>Never in all their history have men been able truly to conceive of the world as one a single sphere</p>
-									</div>
-								</div>
-								<div class="col-lg-6 col-md-6 col-sm-6">
-									<div class="service-block mb-5">
-										<i class="icon-box mb-3 float-left w-100"><img src="img/icons/server.png" class="img-fluid"></i>
-										<h3 class="text-primary">Infra Ágil</h3>
-										<p>Infraestrutura como código, automação de rotinas e construção de ambientes.</p>
-									</div>
-								</div>
-								<div class="col-lg-6 col-md-6 col-sm-6">
-									<div class="service-block mb-5">
-										<i class="icon-box mb-3 float-left w-100"><img src="img/icons/graphic.png" class="img-fluid"></i>
-										<h3 class="text-primary">Monitoramento</h3>
-										<p>Zabbix, Graphana, Cacti ou Nagios, experiencia de monitoramento com mais de 2000 devices com SLA e acionamento remoto!</p>
-									</div>
-								</div>
-								<div class="col-lg-6 col-md-6 col-sm-6">
-									<div class="service-block">
-										<i class="icon-box mb-3 float-left w-100"><img src="img/icons/hosting.png" class="img-fluid"></i>
-										<h3 class="text-primary">Virtualização</h3>
-										<p>Cloud publica ou privada, migração para a nuvem ou construção do cluster On-premisses, temos profissionais experientes e com casos de sucesso.</p>
-									</div>
-								</div>
-							</div>
-							<!-- FIM DIV serviços oferecidos -->						
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-	<!-- FIM do BLOCO 01 - Serviços offerecidos -->
 
-	<!-- BLOCO 02 - Sobre nós -->
-		<section id="about" class="copy-content-sec sec-bg-02">
-		<!-- <section id="about" class="copy-content-sec sec-bg-02 h-100"> -->
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-5 col-md-12 copy-container ml-auto">
-						<div class="copy-content pr-4">
-							<h2 class="font-abril text-primary">
-								Quem somos nós
-							</h2>
-							<p class="lead ml-2">
-								Equipe qualificada com cases concretos e com experiencia em grandes companhias!
-							</p>
-							<p class="ml-2">
-								Analistas Sêniors e Plenos, Engenheiros de Software e Devops.
-							</p>
-							<p class="mt-4 ml-2">
-							</p>
-						</div>
-					</div>
+	<!-- Introdução -->
+	<section id="home" class="intro intro-bg bg-overlay parallax">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-12 caption-two-panel ml-auto pt-5">
+					<div class="intro-caption mt-5">
+					<h1 class="text-white mb-2">GPIT</h1>
+					<p class="text-white mb-4"> Consultoria especializada em serviços OpenSource para Médias e Grandes empresas.
+						<br>
+					Projetos On demand entrelaçando as mellhores práticas para disponibilidade do negócio!</p>
+					<a class="btn btn-primary text-white mr-3" href="#services">Explore mais!</a>
 				</div>
-			</div>
-		</section>
-	<!-- FIM do BLOCO 02 - Sobre nós -->
-
-	<!-- BLOCO 03 - Ultimos Cases -->
-		<section id="cases" class="info-section sec-bg-03 bg-overlay">
-			<div class="container text-white">
-				<div class="head-box text-center mb-5">
-					<h2 class="font-abril">Nossos ultimos Cases</h2>
-				</div>
-				<div class="three-panel-block my-4">
-					<div class="row">
-						<div class="col-lg-6 col-md-6 col-sm-6 pl-md-5 mb-4">
-							<div class="service-block-bg text-center p-3">
-								<div class="price-count font-abril">Braspress</div>
-								<h3>Zabbix com Graphana</h3>
-								<p class="px-4">Construção e administração do Zabbix com Graphana. Monitorando 2 mil ativos de redes (servidores, switchs, roteadores, firewalls, cameras, etc...) </p>
-							</div>
-						</div>
-						<div class="col-lg-6 col-md-6 col-sm-6 pr-md-5 mb-4">
-							<div class="service-block-bg text-center p-3">
-								<div class="price-count font-abril">Braspress</div>
-								<h3>Proxy Web + PF Sense</h3>
-								<p class="px-4">Construção e administração do Proxy Web integrando com o AD, com relatório de acesso.</p>
-							</div>
-						</div>
-						<div class="col-lg-6 col-md-6 col-sm-6 pl-md-5 mb-4">
-							<div class="service-block-bg text-center p-3">
-								<div class="price-count font-abril">Empresa X</div>
-								<h3>Virtualização com KVM </h3>
-								<p class="px-4">Construção e administração do cluster de KVM com blablabla virtualizando 120 servidores Linux e Windows</p>
-							</div>
-						</div>
-						<div class="col-lg-6 col-md-6 col-sm-6 pr-md-5">
-							<div class="service-block-bg text-center p-3">
-								<div class="price-count font-abril">Empresa Y</div>
-								<h3>Devops</h3>
-								<p class="px-4">Devops para blablabla administrando blablabla e trabalhando com blablabla.	</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-	<!-- FIM BLOCO 03 - Ultimos Cases -->
-
-	<!-- BLOCO 04 - Depoimento dos clientes-->
-		<section id="portifolio" class="testimonial-section sec-bg-04 py-5 h-100">
-			<div class="container">
-				<div class="row">
-					<div class="head-box text-center mb-3 col-md-12 mt-5">
-						<h2 class="font-abril">O que nossos clientes estão dizendo sobre nós</h2>
-					</div>
-				</div>
-				<div class="single-testimonial">
-				  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-				    <div class="carousel-inner pt-5" role="listbox">
-				      <div class="carousel-item active">
-				        <div class="testimonial-box text-center">
-							<div class="testimonial-content w-100 bg-faded">
-								<p class="mb-0"><i class="fa fa-quote-left fa-3x" aria-hidden="true"></i></p>
-								<p class="lead font-abril">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-								<div class="testimonial-footer">
-									<h4 class="mt-2 mb-0 text-primary">Davi Pires</h4>
-									<p>-Braspress Transportes Urgentes</p>
-								</div>
-							</div>
-						</div>
-				      </div>
-				      <div class="carousel-item">
-				        <div class="testimonial-box text-center">
-							<div class="testimonial-content w-100 bg-faded">
-								<p class="mb-0"><i class="fa fa-quote-left fa-3x" aria-hidden="true"></i></p>
-								<p class="lead font-abril">"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet.</p>
-								<div class="testimonial-footer">
-									<h4 class="mt-2 mb-0 text-primary">Erick Ferreira</h4>
-									<p>-Fabrica Fortaleza</p>
-								</div>
-							</div>
-						</div>
-				      </div>
-				    </div>
-				    <div class="navigator-box">
-				    	<a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-					      <span class="fa fa-angle-left" aria-hidden="true"></span>
-					      <span class="sr-only">Previous</span>
-					    </a>
-					    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-					      <span class="fa fa-angle-right" aria-hidden="true"></span>
-					      <span class="sr-only">Next</span>
-					    </a>
-				    </div>
-				  </div>
-				</div>
-			</div>
-		</section>
-	<!-- FIM do BLOCO 04 - Depoimento dos clientes-->
-
-	<!-- BLOCO 05 - Contato -->
-	<section id="contato" class="contact-section h-100 bg-dark">
-		<div class="container mt-5 mb-4 text-center text-md-left">
-			<div class="row mt-3 text-white">
-				
-				<!-- primeira coluna -->			
-				<div class="col-md-4 col-lg-4 col-xl-3 mb-4">
-					<h6 class="text-uppercase font-weight-bold">
-						<strong>Onde estamos!</strong>				
-					</h6>
-					<hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-					<div class="google-map"><iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0Dx_boXQiwvdz8sJHoYeZNVTdoWONYkU&amp;q=place_id:ChIJ0WGkg4FEzpQRrlsz_whLqZs" allowfullscreen=""></iframe></div>
-				</div>
-				<!-- FIM primeira coluna -->				
-
-				<!-- Segunda coluna -->	
-				<div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
-					<h6 class="text-uppercase font-weight-bold">
-							<strong>Envia sua mensagem!</strong>				
-					</h6>
-					<hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-					<form>
-						<div class="form-group">
-								<div class="col-md-12 inputGroupContainer">
-							<div class="input-group">
-							<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-							<input  name="first_name" placeholder="Insira seu nome" class="form-control"  type="text">
-								</div>
-							</div>
-						</div>
-
-						<div class="form-group">
-								<div class="col-md-12 inputGroupContainer">
-							<div class="input-group">
-							<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-							<input  name="first_name" placeholder="Insira seu Telefone" class="form-control"  type="text">
-								</div>
-							</div>
-						</div>
-						
-						<div class="form-group">
-							<div class="col-md-12 inputGroupContainer">
-							<div class="input-group">
-							<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-							<input  name="first_name" placeholder="Insira seu email" class="form-control"  type="text">
-								</div>
-							</div>
-						</div>
-
-						<div class="form-group">
-							<div class="col-md-12 inputGroupContainer">
-								<div class="input-group">
-									<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-									<textarea type="text" id="message" name="message" rows="2" placeholder="Insira sua mensagem!" class="form-control md-textarea"></textarea>
-								</div>
-							</div>
-						</div>
-
-					</form>
-					<div class="center-on-small-only">
-							<a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Enviar</a>
-					</div>
-					<div class="status"></div>
-				</div>
-				<!-- FIM Segunda coluna -->
-				
-				<!-- Terceira coluna -->	
-				<div class="col-md-4 col-lg-3 col-xl-3">
-					<h6 class="text-uppercase font-weight-bold">
-						<strong>Contato</strong>
-					</h6>
-					<hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-					<p>
-						<i class="fa fa-phone mr-3"></i> + (55) 11 4899-0530</p>
-					<p>
-						<i class="fa fa-whatsapp mr-3"></i> + (55) 11 91234-1234</p>
-					<p>
-						<i class="fa fa-envelope mr-3"></i> contato@gpit.com.br</p>						
-					<p>
-						<i class="fa fa-linkedin mr-3"></i> fabiodacruz@linkedin.com</p>
-				</div>
-				<!-- Fim terceira coluna -->	
-		
-			</div>
-			
-								  
-	</section>
-
-	<!-- footer -->
-		<div class="copy-footer bg-primary py-2">
-			<div class="container text-center text-light">
-				<a href="#" target="_blank">gpit.com.br</a> &copy; <span id="year"></span></i>
 			</div>
 		</div>
-	<!-- /. fim footer -->
+	</section>
 
 
-	<!-- Scripts em Javascript para exibir o mapa -->
-		<script src="js/bootstrap.min.js" ></script>
-		<script src="js/gmap-custom.js" ></script>
-		<script src="js/core.js"></script>
-		<script src="lib/owlcarousel/owl.carousel.min.js"></script>
-  		<script src="lib/magnific-popup/magnific-popup.min.js"></script>
-  		<script src="lib/sticky/sticky.js"></script>
-		<script src="lib/jquery/jquery.min.js"></script>
-		<script src="js/main.js"></script>
-	<!-- /. Fim Scripts em Javascript para exibir o mapa -->	
+	<!-- Serviços -->
+	<section id="services" class="info-section">
+		<div class="container">
+			
+			<header class="section-header">
+	          <h3>Serviços</h3>
+	          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	          consequat.</p>
+	        </header>
+
+	        <div class="row">
+	        	<div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
+	        		<div class="icon"> <!-- Icone do serviço prestado -->
+	        			<i class="ion-ios-infinite-outline"></i>
+	        		</div>
+	        		<h4 class="title"><a href="">Devops</a></h4>
+	            	<p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+	    		</div>
+	    			<div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
+	            	<div class="icon"> <!-- Icone do serviço prestado -->
+	            		<i class="ion-ios-bookmarks-outline"></i>
+	            	</div>
+	            	<h4 class="title"><a href="">Infra Ágil</a></h4>
+	            	<p class="description">Infraestrutura como código, automação de rotinas e construção de ambientes.</p>
+	          	</div>
+	          	<div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
+	            	<div class="icon"> <!-- Icone do serviço prestado -->
+	            		<i class="ion-ios-checkmark-outline"></i>
+	            	</div>
+	            	<h4 class="title"><a href="">Monitoramento</a></h4>
+	            	<p class="description">Zabbix, Graphana, Cacti ou Nagios, experiencia de monitoramento com mais de 2000 devices com SLA e acionamento remoto!</p>
+	          	</div>
+	          	<div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+	            	<div class="icon"> <!-- Icone do serviço prestado -->
+	            		<i class="ion-ios-cloud-outline"></i>
+	            	</div>
+	            	<h4 class="title"><a href="">Virtualização</a></h4>
+	            	<p class="description">Cloud publica ou privada, migração para a nuvem ou construção do cluster On-premisses, temos profissionais experientes e com casos de sucesso.</p>
+	          	</div>
+	          	<div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+	            	<div class="icon"> <!-- Icone do serviço prestado -->
+	            		<i class="ion-ios-barcode-outline"></i>
+	            	</div>
+	            	<h4 class="title"><a href="">Network</a></h4>
+	            	<p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+	          	</div>
+	          	<div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+	            	<div class="icon"> <!-- Icone do serviço prestado -->
+	            		<i class="ion-ios-people-outline"></i>
+	            	</div>
+	            	<h4 class="title"><a href="">Projetos</a></h4>
+	            	<p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+	          	</div>
+	    	</div>
+		</div>
+	</section>
+
+
+    <!--Sobre nós -->
+    <section id="about" class="info-section bg-right">
+      <div class="container">
+        <header class="section-nos">
+          <h3>Sobre nós</h3>
+          <br>
+          
+        </header>
+
+        <div class="row about-cols">
+
+          <div class="col-md-4 wow fadeInUp">
+            <div class="about-col">
+              <div class="img">
+                <img src="img/about_tecnologia.jpg" alt="" class="img-fluid">
+                <div class="icon"><i class="ion-at"></i></div>
+              </div>
+              <h2 class="title"><a href="#">Tecnologia</a></h2>
+              <p>
+                Equipe apaixonada por Tecnologia!
+                <br> Inovação, otimização, automação e segurança é natural e faz parte do DNA da nossa equipe.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="about-col">
+              <div class="img">
+                <img src="img/about-plan.jpg" alt="" class="img-fluid">
+                <div class="icon"><i class="ion-gear-b"></i></div>
+              </div>
+              <h2 class="title"><a href="#">Engenharia</a></h2>
+              <p>
+                Equipe formada por analistas, consultores e engenheiros!
+                <br>Trabalhamos juntos para dar mais força ao seu projeto.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="about-col">
+              <div class="img">
+                <img src="img/about-mission.jpg" alt="" class="img-fluid">
+                <div class="icon"><i class="ion-checkmark"></i></div>
+              </div>
+              <h2 class="title"><a href="#">Negócios</a></h2>
+              <p>
+				Sólida experiencia com identificação e implementação das melhores práticas para manter a alta disponibilidade dentro do melhor custo-benefício para o projeto!
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+	<!-- Info block 2
+	<section id="price" class="info-section sec-bg-03 bg-overlay">
+		<div class="container text-white">
+			<div class="head-box text-center mb-5">
+				<h2 class="font-abril">Our Jaw Drop Prices</h2>
+			</div>
+			<div class="three-panel-block my-4">
+				<div class="row">
+					<div class="col-lg-6 col-md-6 col-sm-6 pl-md-5 mb-4">
+						<div class="service-block-bg text-center p-3">
+							<div class="price-count font-abril"><span>$</span>39</div>
+							<h3>Haircut</h3>
+							<p class="px-4">Never in all their history have men been able truly to conceive of the world as one a single sphere</p>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 pr-md-5 mb-4">
+						<div class="service-block-bg text-center p-3">
+							<div class="price-count font-abril"><span>$</span>27</div>
+							<h3>Shave</h3>
+							<p class="px-4">Never in all their history have men been able truly to conceive of the world as one a single sphere</p>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 pl-md-5 mb-4">
+						<div class="service-block-bg text-center p-3">
+							<div class="price-count font-abril"><span>$</span>20</div>
+							<h3>Moustache </h3>
+							<p class="px-4">Never in all their history have men been able truly to conceive of the world as one a single sphere</p>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 pr-md-5">
+						<div class="service-block-bg text-center p-3">
+							<div class="price-count font-abril"><span>$</span>15</div>
+							<h3>Beard Trim</h3>
+							<p class="px-4">Never in all their history have men been able truly to conceive of the world as one a single sphere</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	-->
+
+
+	<!-- Testimonial Block 01
+	<section id="testimonial" class="testimonial-section sec-bg-04 py-5 h-100">
+		<div class="container">
+			<div class="row">
+				<div class="head-box text-center mb-3 col-md-12 mt-5">
+					<h2 class="font-abril">What Our Clients Says About Us</h2>
+				</div>
+			</div>
+			<div class="single-testimonial">
+			  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+			    <div class="carousel-inner pt-5" role="listbox">
+			      <div class="carousel-item active">
+			        <div class="testimonial-box text-center">
+						<div class="testimonial-content w-100 bg-faded">
+							<p class="mb-0"><i class="fa fa-quote-left fa-3x" aria-hidden="true"></i></p>
+							<p class="lead font-abril">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+							<div class="testimonial-footer">
+								<h4 class="mt-2 mb-0 text-primary">Gerald Montgomery</h4>
+								<p>-United States</p>
+							</div>
+						</div>
+					</div>
+			      </div>
+			      <div class="carousel-item">
+			        <div class="testimonial-box text-center">
+						<div class="testimonial-content w-100 bg-faded">
+							<p class="mb-0"><i class="fa fa-quote-left fa-3x" aria-hidden="true"></i></p>
+							<p class="lead font-abril">"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet.</p>
+							<div class="testimonial-footer">
+								<h4 class="mt-2 mb-0 text-primary">Harper Robertson</h4>
+								<p>-United States</p>
+							</div>
+						</div>
+					</div>
+			      </div>
+			    </div>
+			    <div class="navigator-box">
+			    	<a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+				      <span class="fa fa-angle-left" aria-hidden="true"></span>
+				      <span class="sr-only">Previous</span>
+				    </a>
+				    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+				      <span class="fa fa-angle-right" aria-hidden="true"></span>
+				      <span class="sr-only">Next</span>
+				    </a>
+			    </div>
+			  </div>
+			</div>
+		</div>
+	</section>
+	-->
+
+
+	<!-- Contact Block
+	<section id="contact" class="contact-section h-100 bg-dark">
+		<div id="map" class="bg-overlay"></div>
+		<div class="container py-5">
+			<div class="col-lg-8 col-md-6 col-sm-10 form-sec bg-white my-5 p-5 mx-auto">
+					<form>
+					  <h2 class="mb-4">Contact Us!</h2>
+					  <div class="row">
+					  	<div class="col-md-6">
+							<div class="form-group">
+								<label class="sr-only" for="formGroupExampleInput">Full Name</label>
+								<input class="form-control" id="formGroupExampleInput" placeholder="Full Name" onfocus="this.placeholder=''" onblur="this.placeholder='Full Name'" type="text">
+							</div>
+					  	</div>
+					  	<div class="col-md-6">
+							<div class="form-group">
+								<label class="sr-only" for="formGroupExampleInput2">Phone Number</label>
+								<input class="form-control" id="formGroupExampleInput2" placeholder="Phone Number" onfocus="this.placeholder=''" onblur="this.placeholder='Phone Number'" type="text">
+							</div>		
+					  	</div>
+					  </div>
+					  <div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="sr-only" for="formGroupExampleInput2">Email Address</label>
+								<input class="form-control" id="formGroupExampleInput2" placeholder="Email Address" onfocus="this.placeholder=''" onblur="this.placeholder='Email Address'" type="email">
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="sr-only" for="formGroupExampleInput2">Address</label>
+								<input class="form-control" id="formGroupExampleInput2" placeholder="Enter Address" onfocus="this.placeholder=''" onblur="this.placeholder='Enter Address'" type="email">
+							</div>
+						</div>
+					  </div>
+					  <div class="row">
+					  	<div class="col-md-12">
+							<div class="form-group">
+								<label class="sr-only" for="formGroupExampleInput2">Message</label>
+								<textarea class="form-control" placeholder="Enter your message here!" rows="4" onfocus="this.placeholder=''" onblur="this.placeholder='Enter your message here!'"></textarea>
+							</div>
+							<div class="form-group">
+								<button class="btn btn-primary btn-capsul px-4">Submit</button>
+							</div>		
+					  	</div>
+					  </div>
+				  </form>
+				</div>
+		</div>
+	</section>
+	-->
+
+
+	<!-- Seção fale conosco -->
+	<section id="contact" class="conosco-section py-5 h-100">
+    	<div class="container">
+	        <div class="secao-faleconosco">
+    		    <h3>Fale Conosco!</h3>
+        	</div>
+
+        	<!-- Dados de contato -->
+        	<div class="row contact-info">
+	        	<div class="col-md-4">
+    		        <div class="contact-address">
+            			<i class="ion-ios-location-outline"></i>
+              			<h3>Região</h3>
+              			<address>SP / RJ / MG</address>
+            		</div>
+          		</div>
+
+        		<div class="col-md-4">
+            		<div class="contact-phone">
+              			<i class="ion-ios-telephone-outline"></i>
+              			<h3>Telefone</h3>
+              			<p><a href="tel:1148990530">(11) 4899-0530</a></p>
+            		</div>
+          		</div>
+
+        		<div class="col-md-4">
+            		<div class="contact-email">
+              			<i class="ion-ios-email-outline"></i>
+              			<h3>Email</h3>
+              			<p><a href="mailto:contato@gpit.com.br">contato@gpit.com.br</a></p>
+            		</div>
+          		</div>
+	        </div>
+
+	        <!-- Enviar mensagem -->
+	        <div class="form">
+    		    <div id="sendmessage">Sua mensagem foi enviada com sucesso!
+    		    </div>
+          		<div id="errormessage"></div>
+          		<form action="" method="post" role="form" class="contactForm">
+	            	<div class="form-row">
+	              		<div class="form-group col-md-6">
+	                		<input type="text" name="name" class="form-control" id="name" placeholder="Seu nome" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+	                		<div class="validation"></div>
+	              		</div>
+	              		<div class="form-group col-md-6">
+	                		<input type="email" class="form-control" name="email" id="email" placeholder="Seu email" data-rule="email" data-msg="Please enter a valid email" />
+	                		<div class="validation"></div>
+	            		</div>
+	        		</div>
+					<div class="form-group">
+						<input type="text" class="form-control" name="subject" id="subject" placeholder="Assunto" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+						<div class="validation"></div>
+		    		</div>
+		    		<div class="form-group">
+						<textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Mensagem"></textarea>
+		        		<div class="validation"></div>
+		    		</div>
+	    			<div class="text-center"><button type="submit">Enviar mensagem</button>
+	    			</div>
+				</form>
+        	</div>
+		</div>
+    </section><!-- #contact -->
+
+
+
+	<!-- footer Block 
+	<div class="copy-footer bg-primary py-2">
+		<div class="container text-center text-light">
+			&copy; <a href="http://gpit.com.br" target="_blank">gpit.com.br</a> <span id="year"></span>. Direitos reservados. Criado com <i class="fa fa-cogs"><a href="http://Seiri.com.br" target="_blank"> Seiri.com.br</i>
+		</div>
+	</div>
+	-->
+	
+	<!-- Botão voltar para o topo -->
+	<a href="#" class="voltar-topo"><i class="fa fa-chevron-up"></i></a>
+
+
+	<!-- Scripts  -->
+	<script src="lib/jquery/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+	<script src="js/bootstrap.min.js" ></script>
+	<script src="js/gmap-custom.js" ></script>
+	<script src="js/core.js"></script>
 </body>
 </html>
