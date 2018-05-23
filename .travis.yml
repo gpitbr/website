@@ -23,7 +23,7 @@ jobs:
     - ansible-playbook ansible/website.yml --syntax-check
     - echo "Deploying in dev";
     - ansible-playbook ansible/website.yml -l aws -t deploy_dev
-    - echo "Deployed run with success";
+    - echo "Deployed run with success in dev";
   
   - stage: deploy_prod
     if: branch = master
@@ -42,4 +42,4 @@ jobs:
     - ansible-playbook ansible/website.yml --syntax-check
     - echo "Deploying in prod";
     - ansible-playbook ansible/website.yml -l aws -t deploy_prod
-    - echo "Deployed run with success";
+    - echo "Deployed run with success in prod";
