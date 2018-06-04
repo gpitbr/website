@@ -3,11 +3,6 @@ variable "google_project_id" {
   default     = "gpit-198019"
 }
 
-variable "account_file" {
-  description = "Path to the JSON file used to describe your account credentials"
-  default     = "/home/fabio/.gce/gpit.json"
-}
-
 variable "region" {
   description = "Region location"
   default     = "us-east1"
