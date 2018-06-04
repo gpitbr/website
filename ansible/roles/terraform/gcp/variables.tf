@@ -47,8 +47,3 @@ variable "subnetwork" {
   description = "Subnetwork gpit"
   default     = "10.20.30.0/24"
 }
-
-variable "nodes" {
-  description = "Number of nodes"
-  default     = 1
-}

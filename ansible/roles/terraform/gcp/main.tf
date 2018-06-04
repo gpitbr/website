@@ -1,6 +1,4 @@
 resource "google_compute_instance" "website" {
-  count        = "${var.nodes}"
-  name         = "website-${count.index}"
   machine_type = "${var.machine_type}"
   zone         = "${var.zone}"
   tags         = "${var.tags}"
