@@ -10,8 +10,8 @@ resource "aws_instance" "main" {
   user_data = <<-EOF
             #!/bin/bash
             sudo yum update -y  &&  sudo yum install ansible python git -y
-            git clone https://github.com/gpitbr/website.git
-            ansible-playbook -i "localhost," -c local /mytest/ansible/k8s-wordpress/site.yml
+            #git clone https://github.com/gpitbr/website.git
+            #ansible-playbook -i "localhost," -c local /mytest/ansible/k8s-wordpress/site.yml
             EOF
 
   tags = {
