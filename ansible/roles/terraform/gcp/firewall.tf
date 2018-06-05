@@ -1,10 +1,10 @@
-resource "google_compute_firewall" "website-http" {
-  name    = "${var.region}-website-http"
-  network = "${google_compute_network.gpit-net}"
+resource "google_compute_firewall" "website" {
+  name    = "website-gpit"
+  network = "default"
 
   allow {
     protocol = "tcp"
-    ports    = ["80"]
+    ports    = ["80", "443"]
   }
 
   target_tags   = ["http"]
