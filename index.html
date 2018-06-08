@@ -1,309 +1,621 @@
 <!DOCTYPE html>
-<html Lang="pt-br">
+<html lang="en">
 <head>
-	<title>GPIT - Consultoria OpenSource</title>
-  	<meta charset="utf-8">
-  	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-  	<meta content="" name="keywords">
-  	<meta content="" name="description">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>GPIT - Consultoria OpenSource</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/pe-icons.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
 
-  	<!-- Icone Favicon -->
-  	<link href="img/favicon.png" rel="icon">
 
-  	<!-- Arquivos CSS -->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/custom-style.css">
-	<link rel="stylesheet" type="text/css" href="css/loaders.css"/>
-	<link href="lib/animate/animate.min.css" rel="stylesheet">
-	
-	<!-- Biblioteca de frameworks -->
-	<link rel="stylesheet" type="text/css" href="lib/font-awesome/css/font-awesome.min.css">
-	<link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/ico/favicon.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/ico/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/ico/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/ico/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" href="images/ico/apple-touch-icon-57x57.png">
 
-	<!-- Google fontes -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+    <script type="text/javascript">
+    jQuery(document).ready(function($){
+	'use strict';
+      	jQuery('body').backstretch([
+	        "images/bg/desenvolvimento moderno.jpg",
+	        "images/bg/imagem 2.jpg",
+	        "images/bg/imagem 3.jpg"
+	    ], {duration: 5000, fade: 500, centeredY: true });
 
+		$("#mapwrapper").gMap({ controls: false,
+         	scrollwheel: false,
+         	markers: [{ 	
+              	latitude:-23.367148,
+				longitude: -46.738826,
+          	icon: { image: "images/marker.png",
+              	iconsize: [44,44],
+          		iconanchor: [12,46],
+          		infowindowanchor: [12, 0] } }],
+          	icon: { 
+              	image: "images/marker.png", 
+             	iconsize: [26, 46],
+              	iconanchor: [12, 46],
+              	infowindowanchor: [12, 0] },
+         	latitude:-23.367148,
+         	longitude: -46.738826,
+          	zoom: 14 });
+    });
+    </script>
 </head>
 <body>
-
-	<!-- Animação carregamento da página -->
-	<div class="loader loader-bg">
-		<div class="loader-inner ball-pulse">
-			<!--  barras do loading do site -->
-			<div></div>
-			<div></div>
-			<div></div>
-		</div>
-	</div>
-
-
-	<!-- Barra superior -->
-	<header id="header">
-		<nav class="navbar navbar-expand-md fixed-top top-nav">
-			<div class="container-fluid">
-      			<!-- Trabalhando o logo do lado esquerdo -->
-      			<div id="logo" class="pull-left">
-        			<h1><a href="#" class="scrollto">GPIT</a></h1>
-			    </div>
-
-			    
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				    <span class="navbar-toggler-icon"><img src="img/icons/menu.png"></span>
-				</button>
-
-
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul class="navbar-nav m-auto text-sm-center text-md-center">
-						<li class="nav-item">
-								<a class="nav-link" href="#home">Inicio <span class="sr-only">(current)</span></a>
-							</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#services">Serviços</a>
-						</li>
-						<li class="nav-item">
-								<a class="nav-link" href="#about">Sobre nós</a>
-						</li>
-						<li class="nav-item">
-								<a class="nav-link">Cases</a>
-						</li>
-						<li class="nav-item">
-								<a class="nav-link">Portifólio</a>
-						</li>
-						<li class="nav-item">
-								<a class="nav-link" href="#contact">Contato</a>
-						</li>
-						AA
-					</ul>
-				</div>	
-				
-			</div>
-		</nav>
-	</header>
-
-
-	<!-- Introdução -->
-	<section id="home" class="intro intro-bg bg-overlay parallax">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-6 col-md-12 caption-two-panel ml-auto pt-5">
-					<div class="intro-caption mt-5">
-					<h1 class="text-white mb-2">GPIT</h1>
-					<p class="text-white mb-4"> A GPiT é uma empresa de consultoria em Tecnologia com foco em soluções open source, 
-						que gerencia projetos de TI ajudando na escolha da melhor solução e mantê-la em operação para médias e grandes empresas. 
-						Segurança, inovação e alto desempenho para quem busca soluções de ponta em TI.</p>
-					<a class="btn btn-primary text-white mr-3" href="#services">Explore mais!</a>
-				</div>
-			</div>
-		</div>
-	</section>
-
-
-	<!-- Serviços -->
-	<section id="services" class="info-section">
-		<div class="container">
-			
-			<header class="section-header">
-	          <h3>Serviços</h3>
-	          <p>Nossos serviços foram desenvolvidos para sua empresa obter sucesso nos desafios da jornada digital. 
-							Proteção, Agilidade, Flexibilidade e Desempenho são as premissas que asseguram resultados para o seu negócio.</p>
-	        </header>
-
-	        <div class="row">
-	        	<div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
-	        		<div class="icon"> <!-- Icone do serviço prestado -->
-	        			<i class="ion-ios-infinite-outline"></i>
-	        		</div>
-	        		<h4 class="title"><a href="">Devops</a></h4>
-	            	<p class="description">Devops é um conjunto de práticas que automatizam processos e operações, com foco em construir, 
-									testar e liberar novas versões de software de forma mais confiável diminuindo assim o Time To Market.</p>
-	    		</div>
-	    			<div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
-	            	<div class="icon"> <!-- Icone do serviço prestado -->
-	            		<i class="ion-ios-bookmarks-outline"></i>
-	            	</div>
-	            	<h4 class="title"><a href="">Infra Ágil</a></h4>
-	            	<p class="description">Infrastrutura ágil é um conjunto de processos e ferramentas essenciais para as áreas de desenvolvimento 
-									e operações estabelecer padrões que tornem a entrega do software e infraestrutura mais ágil e confiavel, possibilitando a evolução das áreas para a era DevOps.</p>
-	          	</div>
-	          	<div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
-	            	<div class="icon"> <!-- Icone do serviço prestado -->
-	            		<i class="ion-ios-checkmark-outline"></i>
-	            	</div>
-	            	<h4 class="title"><a href="">Monitoramento</a></h4>
-	            	<p class="description">A informação confiável no momento certo é essencial para o Sysadmin atuar proativamente no ambiente. 
-									Automatize o seu monitoramento com as ferramentas de ponta como Zabbix, Prometheus, Grafana, ELK. Itens, gatilhos e dashboards com templates inteligentes.</p>
-	          	</div>
-	          	<div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
-	            	<div class="icon"> <!-- Icone do serviço prestado -->
-	            		<i class="ion-ios-cloud-outline"></i>
-	            	</div>
-	            	<h4 class="title"><a href="">Virtualização</a></h4>
-	            	<p class="description">Certamente sua empresa possui infraestrutura virtualizada. Possuimos profissionais certificados e com sólidos conhecimentos
-									 nos principais hypervisors como VMWare, HyperV e KVM. Ajudamos você na criação do cluster e se precisar na administração como um todo.</p>
-	          	</div>
-	          	<div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
-	            	<div class="icon"> <!-- Icone do serviço prestado -->
-	            		<i class="ion-ios-barcode-outline"></i>
-	            	</div>
-	            	<h4 class="title"><a href="">Cloud Computing</a></h4>
-	            	<p class="description">Conhecemos e temos experiencia em clouds publicas ou privadas, profissionais certificados em AWS, Google Plataform e Azure. 
-									Ajudamos sua empresa na administração, arquitetura e migração para multiplas clouds evitando custos desnecessários.</p>
-	          	</div>
-	          	<div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
-	            	<div class="icon"> <!-- Icone do serviço prestado -->
-	            		<i class="ion-ios-people-outline"></i>
-	            	</div>
-	            	<h4 class="title"><a href="">Consultoria</a></h4>
-	            	<p class="description">O serviço de consultoria e suporte é ideal para quem precisa escolher a melhor opção e mantê-la em operação.
-										Por possuir equipe multidisciplinar com especialistas em infraestrutura e desenvolvimento e por trabalharmos com práticas DevOps, atuamos em toda a "pilha" tecnológica de sua solução. Desde o código da aplicação até tunning em infraestrutura.</p>
-	          	</div>
-	    	</div>
-		</div>
-	</section>
-
-
-    <!--Sobre nós -->
-    <section id="about" class="info-section bg-right">
-      <div class="container">
-        <header class="section-nos">
-          <h3>Sobre nós</h3>
-          <br>
-          
-        </header>
-
-        <div class="row about-cols">
-
-          <div class="col-md-4 wow fadeInUp">
-            <div class="about-col">
-              <div class="img">
-                <img src="img/about_tecnologia.jpg" alt="" class="img-fluid">
-                <div class="icon"><i class="ion-at"></i></div>
-              </div>
-              <h2 class="title"><a href="#">Tecnologia</a></h2>
-              <p>
-                Equipe apaixonada por Tecnologia!
-                <br> Inovação, otimização, automação e segurança é natural e faz parte do DNA da nossa equipe.
-              </p>
+<div id="preloader"></div>
+    <header class="navbar navbar-inverse navbar-fixed-top " role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-bars"></i>
+                </button>
+                 <a class="navbar-brand" href="index.html"><h1> GPiT</h1></a>
             </div>
-          </div>
-
-          <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="about-col">
-              <div class="img">
-                <img src="img/about-plan.jpg" alt="" class="img-fluid">
-                <div class="icon"><i class="ion-gear-b"></i></div>
-              </div>
-              <h2 class="title"><a href="#">Engenharia</a></h2>
-              <p>
-                Equipe formada por analistas, consultores e engenheiros!
-                <br>Trabalhamos juntos para dar mais força ao seu projeto.
-              </p>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#">Serviços</a></li>
+                    <li><a href="#">Sobre nós</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contato</a></li> 
+                    <li><a href="#"></a></li> 
+                    <li><a href="#"><i class="fa fa-phone"></i> (11) 4899-0530</a></li>
+                </ul>
             </div>
-          </div>
-
-          <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
-            <div class="about-col">
-              <div class="img">
-                <img src="img/about-mission.jpg" alt="" class="img-fluid">
-                <div class="icon"><i class="ion-checkmark"></i></div>
-              </div>
-              <h2 class="title"><a href="#">Negócios</a></h2>
-              <p>
-				Sólida experiencia com identificação e implementação das melhores práticas para manter a alta disponibilidade dentro do melhor custo-benefício para o projeto!
-              </p>
-            </div>
-          </div>
-
         </div>
+    </header>
 
-      </div>
+    <section id="main-slider" class="no-margin">
+        <div class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="item active">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-5">
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="carousel-content center centered">
+                                	<span class="home-icon pe-7s-refresh-cloud bounce-in"></span>
+                                    <h2 class="boxed animation animated-item-1 fade-down">GPiT</h2>
+                                    <p class="boxed animation animated-item-2 fade-up">A GPiT é uma empresa de consultoria em Tecnologia com foco em soluções open source, que gerencia projetos de TI ajudando na escolha da melhor solução e mantê-la em operação para médias e grandes empresas. Segurança, inovação e alto desempenho para quem busca soluções de ponta em TI.</p>
+                                    <br>
+                                    <a class="btn btn-md animation bounce-in" href="#services">Explore mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <div id="content-wrapper">
+        <section id="services" class="white">
+            <div class="container">
+            <div class="gap"></div> 
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="center gap fade-down section-heading">
+                            <h2 class="main-title">Serviços</h2>
+                            <hr>
+                        </div>                
+                    </div>
+                </div>
 
-	<!-- Seção fale conosco -->
-	<section id="contact" class="conosco-section py-5 h-100">
-    	<div class="container">
-	        <div class="secao-faleconosco">
-    		    <h3>Fale Conosco!</h3>
-        	</div>
-
-        	<!-- Dados de contato -->
-        	<div class="row contact-info">
-	        	<div class="col-md-4">
-    		        <div class="contact-address">
-            			<i class="ion-ios-location-outline"></i>
-              			<h3>Região</h3>
-              			<address>SP / RJ / MG</address>
-            		</div>
-          		</div>
-
-        		<div class="col-md-4">
-            		<div class="contact-phone">
-              			<i class="ion-ios-telephone-outline"></i>
-              			<h3>Telefone</h3>
-              			<p><a href="tel:1148990530">(11) 4899-0530</a></p>
-            		</div>
-          		</div>
-
-        		<div class="col-md-4">
-            		<div class="contact-email">
-              			<i class="ion-ios-email-outline"></i>
-              			<h3>Email</h3>
-              			<p><a href="mailto:contato@gpit.com.br">contato@gpit.com.br</a></p>
-            		</div>
-          		</div>
-	        </div>
-
-	        <!-- Enviar mensagem -->
-	        <div class="form">
-    		    <div id="sendmessage">Sua mensagem foi enviada com sucesso!
-    		    </div>
-          		<div id="errormessage"></div>
-          		<form action="" method="post" role="form" class="contactForm">
-	            	<div class="form-row">
-	              		<div class="form-group col-md-6">
-	                		<input type="text" name="name" class="form-control" id="name" placeholder="Seu nome" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-	                		<div class="validation"></div>
-	              		</div>
-	              		<div class="form-group col-md-6">
-	                		<input type="email" class="form-control" name="email" id="email" placeholder="Seu email" data-rule="email" data-msg="Please enter a valid email" />
-	                		<div class="validation"></div>
-	            		</div>
-	        		</div>
-					<div class="form-group">
-						<input type="text" class="form-control" name="subject" id="subject" placeholder="Assunto" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-						<div class="validation"></div>
-		    		</div>
-		    		<div class="form-group">
-						<textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Mensagem"></textarea>
-		        		<div class="validation"></div>
-		    		</div>
-	    			<div class="text-center"><button type="submit">Enviar mensagem</button>
-	    			</div>
-				</form>
-        	</div>
-		</div>
-    </section><!-- #contact -->
-
-
-
-	<!-- footer Block 
-	<div class="copy-footer bg-primary py-2">
-		<div class="container text-center text-light">
-			&copy; <a href="http://gpit.com.br" target="_blank">gpit.com.br</a> <span id="year"></span>. Direitos reservados. Criado com <i class="fa fa-cogs"><a href="http://Seiri.com.br" target="_blank"> Seiri.com.br</i>
-		</div>
-	</div>
-	-->
-	
-	<!-- Botão voltar para o topo -->
-	<a href="#" class="voltar-topo"><i class="fa fa-chevron-up"></i></a>
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service-block">
+                            <div class="pull-left bounce-in">
+                                <i class="ion-ios-infinite-outline  fa-md"></i>
+                            </div>
+                            <div class="media-body fade-up">
+                                <h3 class="media-heading">Devops</h3>
+                                <p>Devops é um conjunto de práticas que automatizam processos e operações, com foco em construir, testar e liberar novas versões de software de forma mais confiável diminuindo assim o Time To Market.</p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service-block">
+                            <div class="pull-left bounce-in">
+                                <i class="ion-ios-bookmarks-outline fa-md"></i>
+                            </div>
+                            <div class="media-body fade-up">
+                                <h3 class="media-heading">Infra Ágil</h3>
+                                <p>Infrastrutura ágil é um conjunto de processos e ferramentas essenciais para as áreas de desenvolvimento e operações estabelecer padrões que tornem a entrega do software e infraestrutura mais ágil e confiavel, possibilitando a evolução das áreas para a era DevOps.</p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service-block">
+                            <div class="pull-left bounce-in">
+                                <i class="ion-ios-checkmark-outline fa-md"></i>
+                            </div>
+                            <div class="media-body fade-up">
+                                <h3 class="media-heading">Monitoramento</h3>
+                                <p>A informação confiável no momento certo é essencial para o Sysadmin atuar proativamente no ambiente. Automatize o seu monitoramento com as ferramentas de ponta como Zabbix, Prometheus, Grafana, ELK. Itens, gatilhos e dashboards com templates inteligentes.</p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+                </div><!--/.row-->
+                <div class="gap"></div>
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service-block">
+                            <div class="pull-left bounce-in">
+                                <i class="ion-ios-cloud-outline fa-md"></i>
+                            </div>
+                            <div class="media-body fade-up">
+                                <h3 class="media-heading">Virtualização</h3>
+                                <p>Certamente sua empresa possui infraestrutura virtualizada, possuimos profissionais certificados e com sólidos conhecimentos nos principais hypervisores como VMware, Hyper-V, KVM, ajudando desde a criação do cluster quanto na administração do ambiente como um todo.</p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service-block">
+                            <div class="pull-left bounce-in">
+                                <i class="ion-ios-barcode-outline fa-md"></i>
+                            </div>
+                            <div class="media-body fade-up">
+                                <h3 class="media-heading">Cloud Computing</h3>
+                                <p>Certamente sua empresa possui infraestrutura em clouds publicas e/ou privadas, possuimmos profissionais certificados e com sólidos conhecimentos nas principais clouds como AWS, Google Plataform, Azure, podendo ajudar sua empresa na administração desses ambientes como arquitetura, migração para multiplas clouds, etc evitando custos desnecessários.</p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service-block">
+                            <div class="pull-left bounce-in">
+                                <i class="ion-ios-people-outline fa-md"></i>
+                            </div>
+                            <div class="media-body fade-up">
+                                <h3 class="media-heading">Consultoria</h3>
+                                <p>O serviço de consultoria e suporte é ideal para que, precisa escolher a melhor opção Open Source e mantê-la em operação. Por possuir equipe multidisciplinar com especialistas em infraestrutura e desenvolvimento e por trabalharmos com práticas DevOps atuamos em toda a "pilha" tecnológica de sua solução. Desde o código da aplicação até tunning em infraestrutura!</p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+                </div><!--/.row-->
+            </div>
+        </section>
 
 
-	<!-- Scripts  -->
-	<script src="lib/jquery/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-	<script src="js/bootstrap.min.js" ></script>
-	<script src="js/gmap-custom.js" ></script>
-	<script src="js/core.js"></script>
+        
+        <section id="stats" class="divider-section">
+                <div class="gap"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-xs-6">
+                            <div class="center bounce-in">
+                                <span class="stat-icon"><span class="pe-7s-timer bounce-in"></span></span>
+                                <h3>Faça mais em menos tempo</h3>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-xs-6">
+                            <div class="center bounce-in">
+                                <span class="stat-icon"><span class="pe-7s-graph1 bounce-in"></span></span>
+                                <h3>Automatize suas atividades</h3>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-xs-6">
+                            <div class="center bounce-in">
+                                <span class="stat-icon"><span class="pe-7s-light bounce-in"></span></span>
+                                <h3>Trabalhe suas idéias</h3>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-xs-6">
+                            <div class="center bounce-in">
+                                <span class="stat-icon"><span class="pe-7s-box2 bounce-in"></span></span>
+                                <h3>Ferramentas para seus projetos</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gap"></div> 
+        </section>
+
+
+        <section id="pricing" class="white">
+                <div class="container">
+                    <div class="center gap fade-down section-heading">
+                        <h2 class="main-title">Stack de ferramentas</h2>
+                        <hr>
+                        <p>A GPiT implementa os seus projetos de DevOps a partir das principais ferramentas disponíveis no mercado.<br> Abaixo uma relação das principais:</p>
+                    </div>  
+                    <div class="gap"></div>
+                    <div id="pricing-table" class="row">
+                        
+                        <div class="col-md-3 col-xs-6 flip-in">
+                            <ul class="plan plan1">
+                                <li class="plan-price">
+                                    <div>
+                                        <span class="price">Containers</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong>Swarm</strong>
+                                </li>
+                                <li>
+                                    <strong>Docker</strong>
+                                </li>
+                                <li>
+                                    <strong>Kubernetes</strong>
+                                </li>
+                                <li>
+                                    <strong>Mesos</strong>
+                                </li>
+                            </ul>
+                        </div><!--/.col-md-3-->
+
+                        <div class="col-md-3 col-xs-6 flip-in">
+                                <ul class="plan plan2 featured">
+                                <li class="plan-price">
+                                    <div>
+                                        <span class="price">Automação</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong>Rundeck</strong>
+                                </li>
+                                <li>
+                                    <strong>Terraform</strong>
+                                </li>
+                                <li>
+                                    <strong>Chef</strong>
+                                </li>
+                                <li>
+                                    <strong>Jenkins</strong>
+                                </li>
+                            </ul>
+                        </div><!--/.col-md-3-->
+
+                        <div class="col-md-3 col-xs-6 flip-in">
+                                <ul class="plan plan3">
+                                <li class="plan-price">
+                                    <div>
+                                        <span class="price">Provisionamento</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong>Ansible</strong>
+                                </li>
+                                <li>
+                                    <strong>Puppet</strong>
+                                </li>
+                                <li>
+                                    <strong>Saltstack</strong>
+                                </li>
+                                <li>
+                                    <strong>Vagrant</strong>
+                                </li>
+                            </ul>
+                        </div><!--/.col-md-3-->
+
+                        <div class="col-md-3 col-xs-6 flip-in">
+                            <ul class="plan plan2 featured">
+                                <li class="plan-price">
+                                    <div>
+                                        <span class="price">Monitoramento</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong>Zabbix</strong>
+                                </li>
+                                <li>
+                                    <strong>Nagios</strong>
+                                </li>
+                                <li>
+                                    <strong>Kibana</strong>
+                                </li>
+                                <li>
+                                    <strong>Elastic</strong>
+                                </li>
+                            </ul>
+                        </div><!--/.col-md-3-->
+
+                    </div>
+                </div>
+        </section>
+
+
+
+        <section id="blog" class="white">
+                <div class="container">
+                    <div class="center gap fade-down section-heading">
+                   		<div class="gap"></div>
+                        <h2 class="main-title">Projetos de excelencia</h2>
+                        <hr>
+                        <p>Ultimos projetos que transformaram grandes empresas</p>
+                    </div>  
+                    <div class="gap"></div>
+                    <div class="row">
+	                    <div class="col-md-4">
+	                        <div class="post">
+	                            <div class="post-img-content">
+	                                <img src="images/portfolio/folio02.jpg" class="img-responsive" />
+	                                <div class="overlay">
+	                                    <a class="preview btn btn-outlined btn-primary" href="#"><i class="fa fa-link"></i></a>          
+	                                </div>
+	                            </div>
+	                            <div class="content">
+	                                <h2 class="post-title">Titulo</h2>
+	                                <div class="author">
+	                                    <i class="fa fa-gear"></i> <b>Engenharia</b> | <i class="fas fa-infinity"></i> <b>Devops</b> | <i class="fa fa-clock-o"></i> <b>Monitoramento</b>
+	                                </div>
+	                                <div>
+                                        Pequeno texto falando do projeto
+	                                </div>
+	                                <div class="read-more-wrapper">
+	                                    <a href="#" class="btn btn-outlined btn-primary">Leia mais (mantenho??)</a>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="col-md-4">
+	                        <div class="post">
+	                            <div class="post-img-content">
+	                                <img src="images/portfolio/folio06.jpg" class="img-responsive" />
+	                                <div class="overlay">
+	                                    <a class="preview btn btn-outlined btn-primary" href="#"><i class="fa fa-link"></i></a>          
+	                                </div>
+	                            </div>
+	                            <div class="content">
+	                                <h2 class="post-title">Titulo</h2>
+	                                <div class="author">
+	                                    <i class="fa fa-gear"></i> <b>blabla</b> | <i class="fa fa-gear"></i> <b>blabla</b>
+	                                </div>
+	                                <div>
+	                                    Pequeno texto falando do projeto
+	                                </div>
+	                                <div class="read-more-wrapper">
+                                        <a href="#" class="btn btn-outlined btn-primary">Leia mais</a>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="col-md-4">
+	                        <div class="post">
+	                            <div class="post-img-content">
+	                                <img src="images/portfolio/folio11.jpg" class="img-responsive" />
+	                                <div class="overlay">
+	                                    <a class="preview btn btn-outlined btn-primary" href="#"><i class="fa fa-link"></i></a>          
+	                                </div>
+	                            </div>
+	                            <div class="content">
+	                                <h2 class="post-title">Titulo</h2>
+	                                <div class="author">
+                                        <i class="fa fa-gear"></i> <b>blabla</b> | <i class="fa fa-gear"></i> <b>blabla</b>
+	                                </div>
+	                                <div>
+                                        Pequeno texto falando do projeto
+	                                </div>
+	                                <div class="read-more-wrapper">
+                                        <a href="#" class="btn btn-outlined btn-primary">Leia mais</a>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+                    </div> 
+                    <div class="gap"></div>
+                    <div class="row">
+	                    <div class="col-md-4">
+	                        <div class="post">
+	                            <div class="post-img-content">
+	                                <img src="images/portfolio/folio02.jpg" class="img-responsive" />
+	                                <div class="overlay">
+	                                    <a class="preview btn btn-outlined btn-primary" href="#"><i class="fa fa-link"></i></a>          
+	                                </div>
+	                            </div>
+	                            <div class="content">
+                                    <h2 class="post-title">Titulo</h2>
+	                                <div class="author">
+                                        <i class="fa fa-gear"></i> <b>blabla</b> | <i class="fa fa-gear"></i> <b>blabla</b>
+	                                </div>
+	                                <div>
+                                        Pequeno texto falando do projeto
+	                                </div>
+	                                <div class="read-more-wrapper">
+                                        <a href="#" class="btn btn-outlined btn-primary">Leia mais</a>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="col-md-4">
+	                        <div class="post">
+	                            <div class="post-img-content">
+	                                <img src="images/portfolio/folio06.jpg" class="img-responsive" />
+	                                <div class="overlay">
+	                                    <a class="preview btn btn-outlined btn-primary" href="#"><i class="fa fa-link"></i></a>          
+	                                </div>
+	                            </div>
+	                            <div class="content">
+                                    <h2 class="post-title">Titulo</h2>
+	                                <div class="author">
+	                                    <i class="fa fa-user"></i> By <b>Author</b> | <i class="fa fa-clock-o"></i> <time datetime="2014-01-20">April 11th, 2014</time>
+	                                </div>
+	                                <div>
+                                        Pequeno texto falando do projeto
+	                                </div>
+	                                <div class="read-more-wrapper">
+                                        <a href="#" class="btn btn-outlined btn-primary">Leia mais</a>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="col-md-4">
+	                        <div class="post">
+	                            <div class="post-img-content">
+	                                <img src="images/portfolio/folio11.jpg" class="img-responsive" />
+	                                <div class="overlay">
+	                                    <a class="preview btn btn-outlined btn-primary" href="#"><i class="fa fa-link"></i></a>          
+	                                </div>
+	                            </div>
+	                            <div class="content">
+                                    <h2 class="post-title">Titulo</h2>
+	                                <div class="author">
+	                                    <i class="fa fa-user"></i> By <b>Author</b> | <i class="fa fa-clock-o"></i> <time datetime="2014-01-20">April 11th, 2014</time>
+	                                </div>
+	                                <div>
+                                        Pequeno texto falando do projeto
+	                                </div>
+	                                <div class="read-more-wrapper">
+                                        <a href="#" class="btn btn-outlined btn-primary">Leia mais</a>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+                    </div>                              
+                </div>
+        </section>
+
+            <section id="testimonial-carousel" class="divider-section">
+            <div class="gap"></div>
+	            <div class="container">
+	                <div class="row">
+                    	<div class="center gap fade-down section-heading">
+                            <h2 class="main-title">O diz os nossos clientes</h2>
+                            <hr>
+                        </div>                         
+	                    <div class='col-md-offset-2 col-md-8 fade-up'>
+	                        <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+	                            <!-- Bottom Carousel Indicators -->
+	                            <ol class="carousel-indicators">
+	                                <li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
+	                                <li data-target="#quote-carousel" data-slide-to="1"></li>
+	                                <li data-target="#quote-carousel" data-slide-to="2"></li>
+	                            </ol>                                
+	                            <!-- Carousel Slides / Quotes -->
+	                            <div class="carousel-inner">                                
+	                              <!-- Quote 1 -->
+	                                <div class="item active">
+	                                    <blockquote>
+	                                        <div class="row">
+	                                            <div class="col-sm-3 text-center">
+	                                                <img class="img-responsive" src="images/team/team01.jpg" style="width: 100px;height:100px;">
+	                                            </div>
+	                                            <div class="col-sm-9">
+	                                                <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit!</p>
+	                                                <small>Braspress Transportes</small>
+	                                            </div>
+	                                        </div>
+	                                    </blockquote>
+	                                </div>
+	                                <!-- Quote 2 -->
+	                                <div class="item">
+	                                    <blockquote>
+	                                        <div class="row">
+	                                            <div class="col-sm-3 text-center">
+	                                                <img class="img-responsive" src="images/team/team01.jpg" style="width: 100px;height:100px;">
+	                                            </div>
+	                                            <div class="col-sm-9">
+	                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam auctor nec lacus ut tempor. Mauris.</p>
+	                                                <small>Bolachas fortaleza</small>
+	                                            </div>
+	                                        </div>
+	                                    </blockquote>
+	                                </div>
+	                                <!-- Quote 3 -->
+	                                <div class="item">
+	                                    <blockquote>
+	                                        <div class="row">
+	                                            <div class="col-sm-3 text-center">
+	                                                <img class="img-responsive" src="images/team/team03.jpg" style="width: 100px;height:100px;">
+	                                            </div>
+	                                            <div class="col-sm-9">
+	                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum elit in arcu blandit, eget pretium nisl accumsan. Sed ultricies commodo tortor, eu pretium mauris.</p>
+	                                                <small>Galileu Bernardes</small>
+	                                            </div>
+	                                        </div>
+	                                    </blockquote>
+	                                </div>
+	                            </div>                                     
+	                        </div> 
+	                    </div>
+	                </div>
+	                <div class="gap"></div>
+	      		</div>
+      		</section>
+
+
+
+			<div id="mapwrapper">
+				<div id="map"></div>
+			</div>
+
+            <section id="contact" class="white">
+                <div class="container">
+                	<div class="gap"></div>
+                    <div class="center gap fade-down section-heading">
+                        <h2 class="main-title">Nossos contatos</h2>
+                        <hr>
+                        <p>Envie sua mensagem ou ligue para nós para falarmos de transformação digital.</p>
+                    </div>    
+                    <div class="gap"></div>
+                    <div class="row">
+                        <div class="col-md-1">
+                        </div>
+
+                        <div class="col-md-4 fade-up">
+                            <h3>Informações de contato</h3>
+                            <p><span class="icon icon-home"><i class="fas fa-home"></i></span> Caieiras / SP<br/>
+                                <span class="icon icon-phone"><i class="fas fa-phone"></i></span> (11) 4899-0530<br/>
+                                <span class="icon icon-envelop"></span> <i class="fas fa-envelope"></i><a href="mailto:contato@gpit.com.br"> contato@gpit.com.br</a> <br/>
+                                <span class="icon icon-phone"><i class="fab fa-linkedin"></i></span> https://br.linkedin.com/in/fabio-da-cruz<br/>
+                                <span class="icon icon-phone"><i class="fab fa-skype"></i></span> endereço.skype.com <br/>
+                            </p>
+                        </div><!-- col -->
+                        <div class="col-md-1">
+                        </div>
+
+                        <div class="col-md-6 fade-up">
+                            <h3>Envie a sua mensagem</h3>
+                            <br>
+                            <br>
+                            <div id="message"></div>
+                            <form method="post" action="sendemail.php" id="contactform">
+                                <input type="text" name="name" id="name" placeholder="Nome" />
+                                <input type="text" name="email" id="email" placeholder="Email" />
+                                <textarea name="comments" id="comments" placeholder="Mensagem"></textarea>
+                                <input class="btn btn-outlined btn-primary" type="submit" name="submit" value="Enviar" />
+                            </form>
+                        </div><!-- col -->
+                    </div><!-- row -->  
+                    <div class="gap"></div>         
+                </div>
+            </section>
+        </div>
+
+    <div id="footer-wrapper">
+        <footer id="footer" class="">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-11">
+                        &copy; 2018 <a target="_blank" href="http://www.distinctivethemes.com" title="GPiT - Tecnologia para transformação digital">GPiT</a>. Consultoria em tecnologia
+                    </div>
+                    <div class="col-sm-1">
+                        <ul class="pull-right">
+                            <li><a id="gototop" class="gototop" href="#"><i class="fa fa-chevron-up"></i></a></li><!--#gototop-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer><!--/#footer-->
+    </div>
+
+
+    <script src="js/plugins.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>   
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWDPCiH080dNCTYC-uprmLOn2mt2BMSUk&amp;sensor=true"></script> 
+    <script src="js/init.js"></script>
 </body>
 </html>
