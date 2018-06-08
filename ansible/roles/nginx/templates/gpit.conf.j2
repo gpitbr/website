@@ -2,10 +2,10 @@ server {
     listen 80;
     root /var/www/prod/website;
     index index.html index.htm;
-    server_name gpit.com.br;
+    server_name {{ default_domain }};
     access_log on;
     error_log /dev/null crit;
-    if ($host != "gpit.com.br") {
+    if ($host != "{{ default_domain }}") {
        return 404;
     }
     location / {

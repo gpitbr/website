@@ -25,33 +25,13 @@
   gather_facts: True
 
   pre_tasks:
-  - name: Update OS
-    yum: name="*" state=latest update_cache=yes
+  - name: Disabled selinux
+    selinux:
+      state: disabled
     tags:
-      - pre_reques
+      - selinux_disabled
 
-- name: install the 'Development tools' package group
-  yum:
-    name: "@Development tools"
-    state: latest
-
-  - name: Install packages requirements
-    yum: name={{item}} state=latest update_cache=yes
-    with_items:
-      - vim
-      - git
-      - wget
-      - yum-utils
-      - python
-      - augeas-libs            
-      - libffi-devel  
-      - openssl-devel 
-      - python-devel  
-      - python-virtualenv 
-      - python2-pip 
-    tags:
-      - pre_reques
   roles:
-    - nginx
-    - deploy
+    - { role: nginx, tags: ['nginx'] }
+    - { role: deploy }
 

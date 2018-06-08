@@ -9,7 +9,14 @@ resource "aws_instance" "main" {
 
   user_data = <<-EOF
             #!/bin/bash
-            sudo yum update -y  &&  sudo yum install ansible python git -y
+            sudo rpm -ihv https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+            sudo yum update -y
+            
+            # Install packages requirements
+            sudo yum group install -y "Development Tools"
+            sudo yum install -y bash_completion curl wget vim net-tools htop ansible \
+                                python2-pip python-virtualenv python-devel openssl-devel \
+                                libffi-devel augeas-libs python  yum-utils git
             #git clone https://github.com/gpitbr/website.git
             #ansible-playbook -i "localhost," -c local /mytest/ansible/k8s-wordpress/site.yml
             EOF

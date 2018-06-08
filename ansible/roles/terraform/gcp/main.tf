@@ -21,4 +21,16 @@ resource "google_compute_instance" "website" {
       nat_ip = "${google_compute_address.ipexterno.address}"
     }
   }
+
+  connection {
+    type        = "ssh"
+    user        = "${var.gce_ssh_user}"
+    private_key = "${file(var.gce_ssh_pub_key_file)}"
+  }
+
+  provisioner "remote-exec" {
+    scripts = [
+      "scripts/bootstrap.sh",
+    ]
+  }
 }
