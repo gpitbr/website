@@ -182,7 +182,6 @@ blockquote {
     padding: 10px 15px;
     background-color: rgba(0, 0, 0, 0.2);
     display: inline-block;
-    text-transform: uppercase;
 }
 
 #main-slider .carousel .item {
@@ -528,7 +527,7 @@ div.pp_overlay {
     text-align: center;
     color: #fff;
     padding: 10px;
-    font-size: 22px;
+    font-size: 20px;
     padding-bottom: 5px;
 }
 
@@ -1793,7 +1792,6 @@ img.author-box-image {
 #stats h3 {
     margin: 0;
     font-size: 16px;
-    text-transform: uppercase;
 }
 
 
@@ -2184,7 +2182,6 @@ img.author-box-image {
 }
 
 .section-heading p {
-  text-transform: uppercase;
 }
 
 #content-wrapper {
