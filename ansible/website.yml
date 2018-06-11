@@ -19,7 +19,7 @@
   roles:
     - terraform
 
-- name: Configurando nginx web server
+- name: Deploy website
   hosts: aws:gcp
   become: True
   gather_facts: True
