@@ -14,7 +14,7 @@
     - name: Install terraform
       unarchive:
         src: https://releases.hashicorp.com/terraform/{{terraform_version}}/terraform_{{terraform_version}}_linux_amd64.zip
-        dest: /usr/bin
+        dest: /usr/local/bin
         remote_src: True
   roles:
     - terraform
@@ -29,7 +29,7 @@
     selinux:
       state: disabled
     tags:
-      - selinux_disabled
+      - selinux
 
   roles:
     - { role: nginx, tags: ['nginx'] }

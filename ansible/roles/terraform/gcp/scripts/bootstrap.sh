@@ -2,6 +2,9 @@
 
 #  Script to update and install packages basic in instance
 
+# Disabled selinux
+sudo setenforce 0
+
 # Upadate S.O
 sudo yum update -y
 

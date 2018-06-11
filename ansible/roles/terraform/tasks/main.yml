@@ -1,9 +1,17 @@
 ---
 - include_vars:
-    file: inventory/group_vars/{{perfil}}.yml
+    file: inventory/group_vars/{{provider}}.yml
   tags:
-    - deploy
-    
+    - terraform_plan
+    - terraform_destroy
+  
+- name: Cloud {{provider}} 
+  debug:
+    msg: "carregou : {{provider}}"
+  tags:
+    - terraform_plan
+    - terraform_destroy
+      
 - name: Init State
   command: terraform init -get=true -input=false
   register: _terraform_init_state

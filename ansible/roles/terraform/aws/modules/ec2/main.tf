@@ -9,6 +9,7 @@ resource "aws_instance" "main" {
 
   user_data = <<-EOF
             #!/bin/bash
+            sudo setenforce 0
             sudo rpm -ihv https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
             sudo yum update -y
             
