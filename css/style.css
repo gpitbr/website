@@ -167,7 +167,6 @@ blockquote {
     margin-top: 35px;
     font-size: 26px;
     font-weight: 700;
-    text-transform: uppercase;
     padding: 10px 15px;
     text-shadow: rgba(0, 0, 0, 0.4) 0 1px 1px;
     z-index: 10px;
@@ -180,8 +179,14 @@ blockquote {
 
 #main-slider .carousel .boxed {
     padding: 10px 15px;
-    background-color: rgba(0, 0, 0, 0.2);
     display: inline-block;
+}
+
+#main-slider .carousel .textocentral {
+    padding: 10px 15px;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 #main-slider .carousel .item {
@@ -217,7 +222,6 @@ blockquote {
 
 .home-icon {
     padding: 10px 15px;
-    background-color: rgba(0, 0, 0, 0.2);
     clear: both;
     display: block;
     font-size: 38px;
