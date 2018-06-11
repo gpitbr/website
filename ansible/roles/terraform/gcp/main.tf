@@ -1,4 +1,5 @@
 resource "google_compute_instance" "website" {
+  name         = "${var.name}"
   machine_type = "${var.machine_type}"
   zone         = "${var.zone}"
   tags         = "${var.tags}"
@@ -13,12 +14,23 @@ resource "google_compute_instance" "website" {
     sshKeys = "${var.gce_ssh_user}:${file(var.gce_ssh_pub_key_file)}"
   }
 
-  # network interface
   network_interface {
-    subnetwork = "${google_compute_subnetwork.gpit-net.name}"
+    network = "default"
 
     access_config {
-      // ephemeral address
+      nat_ip = "${google_compute_address.ipexterno.address}"
     }
+  }
+
+  connection {
+    type        = "ssh"
+    user        = "${var.gce_ssh_user}"
+    private_key = "${file(var.gce_ssh_pub_key_file)}"
+  }
+
+  provisioner "remote-exec" {
+    scripts = [
+      "scripts/bootstrap.sh",
+    ]
   }
 }

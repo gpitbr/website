@@ -8,6 +8,11 @@ variable "region" {
   default     = "us-east1"
 }
 
+variable "name" {
+  type    = "string"
+  default = "website"
+}
+
 variable "zone" {
   description = "Zone location"
   default     = "us-east1-b"
