@@ -1396,7 +1396,7 @@ ul.pagination > li:hover > a {
 
 textarea#message {
     padding: 10px 15px;
-    height: 219px;
+    height: 119px;
 }
 
 .widget {
@@ -2062,8 +2062,8 @@ img.author-box-image {
 }
 
 #mapwrapper {
-    width: 50%;
-    height: 600px;
+    width: 48%;
+    height: 400px;
 }
 
 .form-horizontal .control-label {
@@ -2077,7 +2077,7 @@ img.author-box-image {
 .form-control {
     padding: 10px 5px;
     background-color: rgba(0, 0, 0, 0.1);
-    color: #202020;
+    color: #ffffff;
     border: none;
     border-radius: 0;
 }
@@ -2200,7 +2200,10 @@ img.author-box-image {
     letter-spacing: 6px;
 }
 
-
+.main-title {
+    text-transform: uppercase;
+    letter-spacing: 6px;
+}
 .section-heading p {
 }
 
