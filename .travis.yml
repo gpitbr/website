@@ -3,17 +3,17 @@ python: '2.7'
 cache:
   pip: true
   directories:
-    - $HOME/buildout-cache
+  - "$HOME/buildout-cache"
 jobs:
   include:
   - stage: deploy_dev
     if: branch = desenv AND NOT type IN (pull_request)
     before_install:
     - openssl aes-256-cbc -K $encrypted_138890a96bfe_key -iv $encrypted_138890a96bfe_iv
-      -in aws-note-agility.enc -out ~/.ssh/aws-note-agility -d
+      -in aws.enc -out ~/.ssh/aws -d
     - eval "$(ssh-agent -s)"
-    - chmod 600 ~/.ssh/aws-note-agility
-    - ssh-add ~/.ssh/aws-note-agility
+    - chmod 600 ~/.ssh/aws
+    - ssh-add ~/.ssh/aws
     - sudo apt-get update -qq
     - sudo apt-get install -qq python-apt python-pycurl
     install:
@@ -24,15 +24,14 @@ jobs:
     - echo "Deploying in dev";
     - ansible-playbook ansible/website.yml -l aws -t deploy_dev
     - echo "Deployed run with success in dev";
-  
   - stage: deploy_prod
     if: branch = master
     before_install:
     - openssl aes-256-cbc -K $encrypted_138890a96bfe_key -iv $encrypted_138890a96bfe_iv
-      -in aws-note-agility.enc -out ~/.ssh/aws-note-agility -d
+      -in aws.enc -out ~/.ssh/aws -d
     - eval "$(ssh-agent -s)"
-    - chmod 600 ~/.ssh/aws-note-agility
-    - ssh-add ~/.ssh/aws-note-agility
+    - chmod 600 ~/.ssh/aws
+    - ssh-add ~/.ssh/aws
     - sudo apt-get update -qq
     - sudo apt-get install -qq python-apt python-pycurl
     install:

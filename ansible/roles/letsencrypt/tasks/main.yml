@@ -1,0 +1,27 @@
+---
+- name: Download certbot-auto
+  get_url:
+    uri: https://dl.eff.org/certbot-auto
+    dest: /us/local/bin
+    mode: a+x
+
+- name: Generate strong DHE parameter {{ default_domain }}
+  command: openssl dhparam -out /etc/ssl/dhparam.pem 2048 creates=/etc/ssl/dhparam.pem
+
+- name: Create directory for letsencrypt
+  file: path="{{ item }}" state=diretoty owner=nginx group=nginx
+  with_items:
+   - /var/lib/letsencrypt/.well-known
+   - /etc/nginx/snippets
+
+- name: Letsencrypt cert generation
+  #shell: letsencrypt certonly -n --webroot -w /var/www/letsencrypt -m {{ le_email }} --agree-tos -d {{ item }}
+  shell: certbot-auto certonly --no-bootstrap --non-interactive --agree-tos --email admin@gpit.com.br --webroot -w /var/lib/letsencrypt/ -d gpit.com.br -d www.gpit.com.br
+  args:
+    creates: /etc/letsencrypt/live/{{ item }}
+  notify: test nginx and reload
+  with_items:
+  - "{{ ssl_domains }}"
+
+
+  

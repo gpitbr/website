@@ -1,5 +1,6 @@
 ---
 # Variables global for environments
+default_domain: "www.gpit.com.br"
 
 # Variables terraform
 terraform_version: 0.11.7

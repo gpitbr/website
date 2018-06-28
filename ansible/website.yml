@@ -14,31 +14,24 @@
     - name: Install terraform
       unarchive:
         src: https://releases.hashicorp.com/terraform/{{terraform_version}}/terraform_{{terraform_version}}_linux_amd64.zip
-        dest: /usr/bin
+        dest: /usr/local/bin
         remote_src: True
   roles:
     - terraform
 
-- name: Configurando nginx web server
+- name: Deploy website
   hosts: aws:gcp
   become: True
   gather_facts: True
 
   pre_tasks:
-  - name: Update OS
-    yum: name="*" state=latest update_cache=yes
+  - name: Disabled selinux
+    selinux:
+      state: disabled
     tags:
-      - pre_reques
+      - selinux
 
-  - name: Install packages requirements
-    yum: name={{item}} state=latest update_cache=yes
-    with_items:
-      - vim
-      - git
-      - wget
-    tags:
-      - pre_reques
   roles:
-    - nginx
-    - deploy
+    - { role: nginx, tags: ['nginx'] }
+    - { role: deploy }
 

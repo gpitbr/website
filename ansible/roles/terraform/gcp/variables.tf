@@ -3,14 +3,14 @@ variable "google_project_id" {
   default     = "gpit-198019"
 }
 
-variable "account_file" {
-  description = "Path to the JSON file used to describe your account credentials"
-  default     = "/home/fabio/.gce/gpit.json"
-}
-
 variable "region" {
   description = "Region location"
   default     = "us-east1"
+}
+
+variable "name" {
+  type    = "string"
+  default = "website"
 }
 
 variable "zone" {
@@ -46,9 +46,4 @@ variable "gce_ssh_pub_key_file" {
 variable "subnetwork" {
   description = "Subnetwork gpit"
   default     = "10.20.30.0/24"
-}
-
-variable "nodes" {
-  description = "Number of nodes"
-  default     = 1
 }
