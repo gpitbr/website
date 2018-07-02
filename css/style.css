@@ -212,10 +212,10 @@ blockquote {
 
 #main-slider .carousel .item.active {
     opacity: 1;
-    -webkit-transition: opacity ease-in-out 500ms;
-    -moz-transition: opacity ease-in-out 500ms;
-    -o-transition: opacity ease-in-out 500ms;
-    transition: opacity ease-in-out 500ms;
+    -webkit-transition: opacity ease-in-out 1200ms;
+    -moz-transition: opacity ease-in-out 1200ms;
+    -o-transition: opacity ease-in-out 1200ms;
+    transition: opacity ease-in-out 1200ms;
     z-index: 1;
 }
 
